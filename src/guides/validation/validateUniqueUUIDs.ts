@@ -6,7 +6,7 @@ export function validateUniqueUUIDs(srcDirPath: string, guidesJson: string[]) {
   const uuids: string[] = [];
 
   guidesJson.forEach(guide => {
-    const guideFilePath = `${srcDirPath}/${guide}`;
+    const guideFilePath = `${srcDirPath}/guides/${guide}`;
     const file = fs.readFileSync(guideFilePath, 'utf8');
     const guideJson = YAML.parse(file) as GitGuideModel;
     if (uuids.includes(guideJson.uuid)) {
@@ -28,9 +28,7 @@ export function validateUniqueUUIDs(srcDirPath: string, guidesJson: string[]) {
 
       step.stepItems.forEach(stepItem => {
         if (uuids.includes(stepItem.uuid)) {
-          throw new Error(
-            `Duplicate Step Item UUID ${stepItem.uuid} in ${guide}`
-          );
+          throw new Error(`Duplicate Step Item UUID ${stepItem.uuid} in ${guide}`);
         } else {
           uuids.push(stepItem.uuid);
         }

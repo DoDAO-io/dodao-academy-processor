@@ -8,26 +8,17 @@ import { generateGuide } from './generateGuide';
 function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
   return guidesToGenerate
     .map((guide, index) => {
-      const file = fs.readFileSync(`${srcDirPath}/${guide}`, 'utf8');
+      const file = fs.readFileSync(`${srcDirPath}/guides/${guide}`, 'utf8');
       const guideJson = YAML.parse(file) as GitGuideModel;
 
       const fileLink = `[Link](generated/markdown/${guideJson.key}.md)`;
-      return `| ${index + 1}      | ${guideJson.name} | ${
-        guideJson.content
-      } |  ${fileLink} |`;
+      return `| ${index + 1}      | ${guideJson.name} | ${guideJson.content} |  ${fileLink} |`;
     })
     .join('\n ');
 }
 
-function generateGuides(
-  header: string,
-  footer: string,
-  srcDirPath: string,
-  guidesToGenerate: string[]
-) {
-  guidesToGenerate.forEach(guide =>
-    generateGuide(header, footer, srcDirPath, guide)
-  );
+function generateGuides(header: string, footer: string, srcDirPath: string, guidesToGenerate: string[]) {
+  guidesToGenerate.forEach(guide => generateGuide(header, footer, srcDirPath, guide));
 
   // prettier-ignore
   const courseReadmeContents =
@@ -64,9 +55,9 @@ function createDirectories(courseDirPath: string) {
 }
 
 export function generateGuideFiles(srcDirPath: string) {
-  const guidesFile = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
-  const header = fs.readFileSync(`${srcDirPath}/guides-header.md`, 'utf8');
-  const footer = fs.readFileSync(`${srcDirPath}/guides-footer.md`, 'utf8');
+  const guidesFile = fs.readFileSync(`${srcDirPath}/guides/guides.yaml`, 'utf8');
+  const header = fs.readFileSync(`${srcDirPath}/guides/guides-header.md`, 'utf8');
+  const footer = fs.readFileSync(`${srcDirPath}/guides/guides-footer.md`, 'utf8');
 
   createDirectories(srcDirPath);
 
@@ -74,7 +65,7 @@ export function generateGuideFiles(srcDirPath: string) {
   generateGuides(header, footer, srcDirPath, guidesToGenerate);
 
   writeFileSync(
-    `${srcDirPath}/../generated/json/guides.json`,
+    `${srcDirPath}/../../generated/guides/json/guides.json`,
     JSON.stringify(
       guidesToGenerate.map(guide => guide.replace('.yaml', '.json')),
       null,

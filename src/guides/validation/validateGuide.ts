@@ -30,12 +30,12 @@ export function validateGuide(guideFilePath: string) {
 }
 
 export function validateGuides(srcDirPath: string) {
-  const file = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
+  const file = fs.readFileSync(`${srcDirPath}/guides/guides.yaml`, 'utf8');
   const guideJson = YAML.parse(file).guides as string[];
 
   validateUniqueUUIDs(srcDirPath, guideJson);
   guideJson.forEach(guide => {
-    validateGuide(`${srcDirPath}/${guide}`);
+    validateGuide(`${srcDirPath}/guides/${guide}`);
   });
   console.log(guideJson);
 }

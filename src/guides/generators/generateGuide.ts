@@ -7,10 +7,7 @@ import { GitUserInput } from '../model/GitUserInput';
 import { GitUserDiscordConnect } from '../model/StepItemType';
 import { writeFileSync } from '../utils/writeFileSync';
 
-const choicesMarkdown = (
-  answerKeys: string[],
-  choices: GitQuestionChoice[]
-): string => {
+const choicesMarkdown = (answerKeys: string[], choices: GitQuestionChoice[]): string => {
   return choices
     .map(choice => {
       // prettier-ignore
@@ -19,9 +16,7 @@ const choicesMarkdown = (
     .join('\n');
 };
 
-export function generateStepItem(
-  stepItem: GitGuideQuestion | GitUserInput | GitUserDiscordConnect
-) {
+export function generateStepItem(stepItem: GitGuideQuestion | GitUserInput | GitUserDiscordConnect) {
   if (isQuestion(stepItem)) {
     const question = stepItem as GitGuideQuestion;
     return dedent`
@@ -50,13 +45,8 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateGuide(
-  header: string,
-  footer: string,
-  srcDirPath: string,
-  guideToGenerate: string
-) {
-  const file = fs.readFileSync(`${srcDirPath}/${guideToGenerate}`, 'utf8');
+export function generateGuide(header: string, footer: string, srcDirPath: string, guideToGenerate: string) {
+  const file = fs.readFileSync(`${srcDirPath}/guides/${guideToGenerate}`, 'utf8');
   const guideJson = YAML.parse(file) as GitGuideModel;
 
   const courseReadmeContents = dedent`${header}
@@ -83,13 +73,7 @@ ${footer}
    
 `;
 
-  writeFileSync(
-    `${srcDirPath}/../generated/markdown/${guideJson.key}.md`,
-    courseReadmeContents
-  );
+  writeFileSync(`${srcDirPath}/../generated/markdown/${guideJson.key}.md`, courseReadmeContents);
 
-  writeFileSync(
-    `${srcDirPath}/../generated/json/${guideJson.key}.json`,
-    JSON.stringify(guideJson, null, 2)
-  );
+  writeFileSync(`${srcDirPath}/../generated/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
 }

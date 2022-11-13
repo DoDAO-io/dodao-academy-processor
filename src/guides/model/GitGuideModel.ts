@@ -20,12 +20,7 @@ export enum GuidePublishStatus {
   Draft = 'Draft',
 }
 
-export const GuideTypesArray = [
-  GuideType.Course,
-  GuideType.Onboarding,
-  GuideType.HowTo,
-  GuideType.LevelUp,
-];
+export const GuideTypesArray = [GuideType.Course, GuideType.Onboarding, GuideType.HowTo, GuideType.LevelUp];
 
 export interface GitGuideModel {
   categories: string[];
@@ -44,13 +39,8 @@ export interface GitGuideModel {
   uuid: string;
 }
 
-export const isQuestion = (item: { type: string }) =>
-  item.type === QuestionType.MultipleChoice ||
-  item.type === QuestionType.SingleChoice;
+export const isQuestion = (item: { type: string }) => item.type === QuestionType.MultipleChoice || item.type === QuestionType.SingleChoice;
 
-export const isUserInput = (item: { type: string }) =>
-  item.type === InputType.PublicShortInput ||
-  item.type === InputType.PrivateShortInput;
+export const isUserInput = (item: { type: string }) => item.type === InputType.PublicShortInput || item.type === InputType.PrivateShortInput;
 
-export const isUserDiscordConnect = (item: { type: string }) =>
-  item.type === UserDiscordConnectType;
+export const isUserDiscordConnect = (item: { type: string }) => item.type === UserDiscordConnectType;
