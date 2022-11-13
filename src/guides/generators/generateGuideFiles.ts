@@ -11,7 +11,7 @@ function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
       const file = fs.readFileSync(`${srcDirPath}/guides/${guide}`, 'utf8');
       const guideJson = YAML.parse(file) as GitGuideModel;
 
-      const fileLink = `[Link](generated/markdown/${guideJson.key}.md)`;
+      const fileLink = `[Link](markdown/${guideJson.key}.md)`;
       return `| ${index + 1}      | ${guideJson.name} | ${guideJson.content} |  ${fileLink} |`;
     })
     .join('\n ');
@@ -35,15 +35,15 @@ ${(generateGuidesTable(srcDirPath, guidesToGenerate))}
 ${footer} 
 `;
 
-  writeFileSync(`${srcDirPath}/../README.md`, courseReadmeContents);
+  writeFileSync(`${srcDirPath}/../generated/guides/README.md`, courseReadmeContents);
 }
 
 function createDirectories(courseDirPath: string) {
-  const generatedFolder = `${courseDirPath}/../generated`;
+  const generatedFolder = `${courseDirPath}/../generated/guides`;
   fs.rmSync(generatedFolder, { recursive: true, force: true });
 
-  const markdown = `${courseDirPath}/../generated/markdown`;
-  const json = `${courseDirPath}/../generated/json`;
+  const markdown = `${courseDirPath}/../generated/guides/markdown`;
+  const json = `${courseDirPath}/../generated/guides/json`;
 
   const foldersToGenerate = [generatedFolder, markdown, json];
 
@@ -65,7 +65,7 @@ export function generateGuideFiles(srcDirPath: string) {
   generateGuides(header, footer, srcDirPath, guidesToGenerate);
 
   writeFileSync(
-    `${srcDirPath}/../../generated/guides/json/guides.json`,
+    `${srcDirPath}/../generated/guides/json/guides.json`,
     JSON.stringify(
       guidesToGenerate.map(guide => guide.replace('.yaml', '.json')),
       null,

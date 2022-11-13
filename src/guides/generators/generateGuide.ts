@@ -73,7 +73,7 @@ ${footer}
    
 `;
 
-  writeFileSync(`${srcDirPath}/../generated/markdown/${guideJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${srcDirPath}/../generated/guides/markdown/${guideJson.key}.md`, courseReadmeContents);
 
-  writeFileSync(`${srcDirPath}/../generated/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
+  writeFileSync(`${srcDirPath}/../generated/guides/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
 }
