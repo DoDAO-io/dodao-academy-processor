@@ -8,7 +8,6 @@ import guideStepSchema from './schemas/guideStepSchema.json';
 import questionSchema from './schemas/questionSchema.json';
 import userInputSchema from './schemas/userInputSchema.json';
 import { throwValidationError } from './throwValidationError';
-import { validateUniqueUUIDs } from './validateUniqueUUIDs';
 
 export function validateGuide(guideFilePath: string) {
   const file = fs.readFileSync(guideFilePath, 'utf8');
@@ -27,15 +26,4 @@ export function validateGuide(guideFilePath: string) {
   if (!res.valid || res.errors.length > 0) {
     throwValidationError(guideFilePath, res.errors);
   }
-}
-
-export function validateGuides(srcDirPath: string) {
-  const file = fs.readFileSync(`${srcDirPath}/guides/guides.yaml`, 'utf8');
-  const guideJson = YAML.parse(file).guides as string[];
-
-  validateUniqueUUIDs(srcDirPath, guideJson);
-  guideJson.forEach(guide => {
-    validateGuide(`${srcDirPath}/guides/${guide}`);
-  });
-  console.log(guideJson);
 }
