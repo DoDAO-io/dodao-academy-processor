@@ -1,6 +1,6 @@
 import fs from 'fs';
 import YAML from 'yaml';
-import { GitGuideModel } from 'guides/model/GitGuideModel';
+import { GitGuideModel } from '../model/GitGuideModel';
 
 export function validateUniqueUUIDs(srcDirPath: string, guidesJson: string[]) {
   const uuids: string[] = [];

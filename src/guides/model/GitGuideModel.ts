@@ -1,6 +1,6 @@
-import { GitGuideIntegrations } from 'guides/model/GitGuideIntegrations';
-import { QuestionType, UserDiscordConnectType } from 'guides/model/StepItemType';
-import { GitGuideStep } from 'guides/model/GitGuideStep';
+import { GitGuideIntegrations } from './GitGuideIntegrations';
+import { GitGuideStep } from './GitGuideStep';
+import { QuestionType, UserDiscordConnectType } from './StepItemType';
 
 export enum InputType {
   PublicShortInput = 'PublicShortInput',

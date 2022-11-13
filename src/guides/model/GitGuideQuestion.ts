@@ -1,5 +1,5 @@
-import { GitGuideStepItem } from 'guides/model/GitGuideStepItem';
-import { QuestionType } from 'guides/model/StepItemType';
+import { GitGuideStepItem } from './GitGuideStepItem';
+import { QuestionType } from './StepItemType';
 
 export interface GitQuestionChoice {
   content: string;

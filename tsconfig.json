@@ -3,10 +3,7 @@
   "include": [
     "src",
     "types",
-    "src/**/*",
-    "src/**/*.json",
-    "test/**/*",
-    "test/**/*.json"
+    "src/**/*"
   ],
   "compilerOptions": {
     "baseUrl": ".",
@@ -42,9 +39,6 @@
     "forceConsistentCasingInFileNames": true,
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "guides/*": ["src/guides/*"]
-    }
+    "resolveJsonModule": true
   }
 }

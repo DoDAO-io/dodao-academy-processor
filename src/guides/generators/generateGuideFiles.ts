@@ -1,9 +1,9 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import { GitGuideModel } from 'guides/model/GitGuideModel';
-import { generateGuide } from 'guides/generators/generateGuide';
 import YAML from 'yaml';
-import { writeFileSync } from 'guides/utils/writeFileSync';
+import {GitGuideModel} from '../model/GitGuideModel';
+import {writeFileSync} from '../utils/writeFileSync';
+import {generateGuide} from './generateGuide';
 
 function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
   return guidesToGenerate

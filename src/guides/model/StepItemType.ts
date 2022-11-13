@@ -1,4 +1,4 @@
-import { GitGuideStepItem } from 'guides/model/GitGuideStepItem';
+import { GitGuideStepItem } from './GitGuideStepItem';
 
 export enum QuestionType {
   SingleChoice = 'SingleChoice',

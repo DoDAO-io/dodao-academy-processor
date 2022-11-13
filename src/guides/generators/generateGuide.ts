@@ -1,11 +1,11 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import { GitGuideQuestion, GitQuestionChoice } from 'guides/model/GitGuideQuestion';
-import { GitUserInput } from 'guides/model/GitUserInput';
-import { GitUserDiscordConnect } from 'guides/model/StepItemType';
-import { GitGuideModel, isQuestion, isUserInput } from 'guides/model/GitGuideModel';
 import YAML from 'yaml';
-import { writeFileSync } from 'guides/utils/writeFileSync';
+import { GitGuideModel, isQuestion, isUserInput } from '../model/GitGuideModel';
+import { GitGuideQuestion, GitQuestionChoice } from '../model/GitGuideQuestion';
+import { GitUserInput } from '../model/GitUserInput';
+import { GitUserDiscordConnect } from '../model/StepItemType';
+import { writeFileSync } from '../utils/writeFileSync';
 
 const choicesMarkdown = (
   answerKeys: string[],
@@ -31,7 +31,7 @@ export function generateStepItem(
       
 ${choicesMarkdown(question.answerKeys, question.choices)}
 
-
+ 
 `;
   } else if (isUserInput(stepItem)) {
     const userInput = stepItem as GitUserInput;

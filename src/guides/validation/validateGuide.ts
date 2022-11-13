@@ -1,14 +1,14 @@
 import fs from 'fs';
-import { validateUniqueUUIDs } from 'guides/validation/validateUniqueUUIDs';
-import { throwValidationError } from 'guides/validation/throwValidationError';
-import YAML from 'yaml';
 import { Validator } from 'jsonschema';
-import guideFileSchema from 'guides/validation/schemas/guideSchema.json';
-import guideIntegrationsSchema from 'guides/validation/schemas/guideIntegrationsSchema.json';
-import guideStepSchema from 'guides/validation/schemas/guideStepSchema.json';
-import discordConnectSchema from 'guides/validation/schemas/discordConnectSchema.json';
-import userInputSchema from 'guides/validation/schemas/userInputSchema.json';
-import questionSchema from 'guides/validation/schemas/questionSchema.json';
+import YAML from 'yaml';
+import discordConnectSchema from './schemas/discordConnectSchema.json';
+import guideIntegrationsSchema from './schemas/guideIntegrationsSchema.json';
+import guideFileSchema from './schemas/guideSchema.json';
+import guideStepSchema from './schemas/guideStepSchema.json';
+import questionSchema from './schemas/questionSchema.json';
+import userInputSchema from './schemas/userInputSchema.json';
+import { throwValidationError } from './throwValidationError';
+import { validateUniqueUUIDs } from './validateUniqueUUIDs';
 
 export function validateGuide(guideFilePath: string) {
   const file = fs.readFileSync(guideFilePath, 'utf8');

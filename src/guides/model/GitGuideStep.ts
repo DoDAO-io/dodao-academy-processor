@@ -1,6 +1,6 @@
-import { GitGuideQuestion } from 'guides/model/GitGuideQuestion';
-import { GitUserDiscordConnect } from 'guides/model/StepItemType';
-import { GitUserInput } from 'guides/model/GitUserInput';
+import { GitGuideQuestion } from './GitGuideQuestion';
+import { GitUserDiscordConnect } from './StepItemType';
+import { GitUserInput } from './GitUserInput';
 
 export interface GitGuideStep {
   content: string;
