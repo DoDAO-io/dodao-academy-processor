@@ -1,0 +1,29 @@
+{
+  "id": "/UserInputSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "label" : {
+      "type": "string",
+      "maxLength": 20
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "PublicShortInput",
+        "PrivateShortInput"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "type"
+  ],
+  "additionalProperties": false
+}

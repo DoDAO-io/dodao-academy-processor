@@ -1,0 +1,175 @@
+categories:
+  - developer
+  - engineering
+# postSubmissionStepContent:
+content: Explains why and what courses are we working on
+created: "1658763127"
+#guideIntegrations:
+#  discordRoleIds: []
+#  discordRolePassingCount:
+#  discordWebhook:
+#  projectGalaxyCredentialId:
+#  projectGalaxyOatMintUrl:
+#  projectGalaxyOatPassingCount:
+guideType: onboarding
+key: course-contributor
+name: Course Contributor
+showIncorrectOnCompletion: true
+publishStatus: Live
+thumbnail: ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8
+uuid: 02103121-0601-4bcf-aea4-05effa366b5f
+steps:
+  - content: |
+      There are already so many blockchain courses then why do we need another
+      course?  The reason are
+        1. There are definitely some basic courses, but there are only a few courses that cover advanced Developer Concepts & Tools, DeFi, or NFT topics.
+        2. We want to cover all the advanced topics in DoDAO and to be able to write advanced courses, we need to have basic information/courses in place
+           first.
+        3. Once done with basic topics, we will work on the advanced topics.
+        4. DoDAO is an onboarding platform, i.e. we educate the users about various projects. Understanding these blockchain projects needs a lot of basic blockchain knowledge.
+           These courses can then be reused when we develop onboarding content for various projects.      
+      Note - We would want our courses to be completely free for everyone
+      and forever.
+    stepItems: []
+    name: Why another course?
+    uuid: 7c7630f3-9bfb-4c9e-8bbe-3b9932c07a07
+  - content: ''
+    stepItems:
+      - answerKeys:
+          - dog_or_cat
+          - only_dog
+        choices:
+          - content: We can to evaluate the students who apply for internships
+            key: dog_and_cat
+          - content: DoDAO is an onboarding platform and a lot of course content can then
+              be reused when we develop onboarding content for various projects
+            key: dog_or_cat
+          - content: There are not that many courses that cover advanced topics
+            key: only_dog
+          - content: DoDAO's business model is to earn through courses
+            key: only_cat
+        content: Why are we writing courses in DoDAO?
+        type: MultipleChoice
+        uuid: 951c2561-47e5-48cd-baec-0a3875b087cb
+    name: Evaluation
+    uuid: 36360d18-0db0-4880-ac8b-8231dff4eed8
+  - content: |
+      There are many video courses, but these is less focus on creating summarized
+      content and on creating questions bank. So our focus is to reuse the videos
+      from youtube, but create high quality summaries and question banks.There were
+      couple of suggestions which we will also include
+      1. Create mind maps - Suggestion by Lakshya. This can be done after we are done with all the chapters. We will
+      create mind map for each chapter and this will be paid work.
+      2. Incentivize course completion - Allow users to download all the mind-maps once they complete
+      the full course. This was recommended by Raghav
+      3. Assignments and Solutions
+          - Add 2-4 assignments for each chapter with the solutions.4. Video Annotations
+          - Annotating the Youtube Videos with relevant timestamps and questions. We will allow skipping of parts of the video and also show questions on top of videos
+
+      Note: Please recommend at least one idea in the #discussions channel under courses
+    stepItems: []
+    name: How are our Courses different?
+    uuid: 3eff00c5-7b99-4100-ad6e-5ad9c900c739
+  - content: ''
+    stepItems:
+      - answerKeys:
+          - 8a087cda
+          - ee74f525
+        choices:
+          - content: They don't  cover the details
+            key: e197fff9
+          - content: There is no summarized content which you can refer to for Youtube Courses
+            key: 8a087cda
+          - content: 'Youtube courses are not technical and don''t cover code '
+            key: 02db294f
+          - content: There are no question banks to evaluate the knowledge gained
+            key: ee74f525
+        content: For the courses currently available on youtube, what is missing?
+        type: MultipleChoice
+        uuid: ebc0438f-a46f-48b7-aab5-ffed6ac664e4
+    name: Evaluation
+    uuid: 4f189ddb-9f74-4b55-b406-e1a6296cb7d6
+  - content: |
+      Our basic courses will consist of 6-10 chapters and in each chapter we
+      will cover
+      1. Readings - we call it readings, but this is the list of videos one can watch on Youtube to know about the topic. We should capture max of 3-4
+      videos for each chapter.
+      2. Summaries - This is a list of sub-topics in a chapter which we will summarize. Intent is the user can revise each and every concept
+      in the chapter by going through the bullet points. Please look at \"Two Minute Drill\" sections in SCJP book ([https://firozstar.tripod.com/_darksiderg.pdf](https://firozstar.tripod.com/_darksiderg.pdf))
+      3. Questions - About 50 high quality single or multiple choice questions for each chapter. We want to write max 2-3 true/false questions. Almost in all cases
+      the question should have at least 4 choices.
+    stepItems: []
+    name: What is included in a course?
+    uuid: f5ef2b90-51d2-4b95-8f25-ba3047436c26
+  - content: |-
+      Here is the list of courses that we will start with. We will be adding more to the list as we get more clarity
+      
+      ![Courses](https://raw.githubusercontent.com/DoDAO-io/dodao-guide-images/main/ETH/DoDAO/Couse%20Contributor/image.png)
+    stepItems: []
+    name: What courses will we write?
+    uuid: 64f91c87-47b2-4bf0-a54c-b815a1e8c827
+  - content: | 
+      Currently contributing to courses involves working on a chapter which
+      has \"two\" tasks
+      1. Readings and Summaries - Create yaml file with details of readings and summaries for that chapter. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml)
+      2. Questions - Create 50 high quality single or multiple choice questions for the  chapter you are working on. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml). Later
+        on we will add another task i.e. creating of the mind maps for each chapter, but
+        for now its not needed. Also make sure that your name is added on a Trello card corresponding to the task you are working on.
+    stepItems: []
+    name: Contributing
+    uuid: bd8f0b48-4e61-478a-b275-68e3c93db760
+  - content: ''
+    stepItems:
+      - answerKeys:
+          - 90420cff
+          - 2a0ac8ef
+        choices:
+          - content: Create a youtube video
+            key: 9f14e5c3
+          - content: Create yaml file with readings and summaries
+            key: 2a0ac8ef
+          - content: Create yaml file for questions
+            key: 90420cff
+          - content: Create a mind map
+            key: 2d9e55e8
+        content: What two tasks are currently part of the work involved for a chapter
+          of a course?
+        type: MultipleChoice
+        uuid: f12c2758-858d-4fe4-9560-f4dd9454f89a
+      - answerKeys:
+          - 86cd5c4a
+        choices:
+          - content: Github
+            key: 91473ca8
+          - content: Trello
+            key: 86cd5c4a
+          - content: Jira
+            key: '009edcb4'
+          - content: Dework
+            key: 5f91a3eb
+        content: Before starting on a task make sure your name is added to a task on _____
+        type: SingleChoice
+        uuid: 2b8c3034-6c98-4d60-9741-f78efe71d6ad
+    name: Evaluation
+    uuid: 227e9138-ddae-4ab2-9740-a83185833d33
+  - content: Create an account on Trello as we use that for task management [https://trello.com](https://trello.com)
+    stepItems:
+      - uuid: 5e025ae8-daf2-4074-8e6c-68de05d3e5cc
+        label: Name
+        required: true
+        type: PublicShortInput
+
+      - uuid: 0de9f39c-acb1-4835-8f8c-75ba0e22ffad
+        label: Trello Username
+        required: true
+        type: PublicShortInput
+
+      - uuid: 54f694d3-da65-4137-83a1-c8ae2e6b0e16
+        label: Github Username
+        required: true
+        type: PublicShortInput
+
+      - uuid: 0d3bf837-e661-43b3-ba85-6d2ebb272be5
+        type: UserDiscordConnect
+    name: Your Info
+    uuid: 4ea13235-65e1-4169-aeb8-a28bf7306716

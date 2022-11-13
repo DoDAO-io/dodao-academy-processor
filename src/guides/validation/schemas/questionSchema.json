@@ -1,0 +1,102 @@
+{
+  "id": "/QuestionSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "MultipleChoice",
+        "SingleChoice"
+      ]
+    },
+    "content": {
+      "type": "string"
+    },
+    "answerKeys": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "choices": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "key"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "key"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "key"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "key"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "uuid",
+    "type",
+    "content",
+    "answerKeys",
+    "choices"
+  ],
+  "additionalProperties": false
+
+}

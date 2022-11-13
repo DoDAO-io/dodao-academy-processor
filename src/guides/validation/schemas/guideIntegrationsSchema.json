@@ -1,0 +1,29 @@
+{
+  "id": "/GuideIntegrationsSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "discordRoleIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "discordRolePassingCount": {
+      "type": "integer"
+    },
+    "discordWebhook": {
+      "type": "string"
+    },
+    "projectGalaxyCredentialId": {
+      "type": "string"
+    },
+    "projectGalaxyOatMintUrl": {
+      "type": "string"
+    },
+    "projectGalaxyOatPassingCount": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "id": "/DiscordConnectSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["UserDiscordConnect"]
+    }
+  },
+  "required": [
+    "uuid",
+    "type"
+  ],
+  "additionalProperties": false
+}
