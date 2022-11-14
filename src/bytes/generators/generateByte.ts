@@ -2,8 +2,8 @@ import dedent from 'dedent-js';
 import fs from 'fs';
 import YAML from 'yaml';
 import { writeFileSync } from '../../utils/writeFileSync';
-import { GitGuideModel, isQuestion, isUserInput } from '../model/GitGuideModel';
-import { GitGuideQuestion, GitQuestionChoice } from '../model/GitGuideQuestion';
+import { GitByteModel, isQuestion, isUserInput } from '../model/GitByteModel';
+import { GitByteQuestion, GitQuestionChoice } from '../model/GitByteQuestion';
 import { GitUserInput } from '../model/GitUserInput';
 import { GitUserDiscordConnect } from '../model/StepItemType';
 
@@ -16,9 +16,9 @@ const choicesMarkdown = (answerKeys: string[], choices: GitQuestionChoice[]): st
     .join('\n');
 };
 
-export function generateStepItem(stepItem: GitGuideQuestion | GitUserInput | GitUserDiscordConnect) {
+export function generateStepItem(stepItem: GitByteQuestion | GitUserInput | GitUserDiscordConnect) {
   if (isQuestion(stepItem)) {
-    const question = stepItem as GitGuideQuestion;
+    const question = stepItem as GitByteQuestion;
     return dedent`
 
 
@@ -45,16 +45,16 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateGuide(header: string, footer: string, srcDirPath: string, guideToGenerate: string) {
-  const file = fs.readFileSync(`${srcDirPath}/guides/${guideToGenerate}`, 'utf8');
-  const guideJson = YAML.parse(file) as GitGuideModel;
+export function generateByte(header: string, footer: string, srcDirPath: string, byteToGenerate: string) {
+  const file = fs.readFileSync(`${srcDirPath}/bytes/${byteToGenerate}`, 'utf8');
+  const byteJson = YAML.parse(file) as GitByteModel;
 
   const courseReadmeContents = dedent`${header}
 ---
 
-## ${guideJson.name}
+## ${byteJson.name}
 
-${guideJson.steps
+${byteJson.steps
   .map(step => {
     return dedent`
 
@@ -73,7 +73,7 @@ ${footer}
    
 `;
 
-  writeFileSync(`${srcDirPath}/../generated/guides/markdown/${guideJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${srcDirPath}/../generated/bytes/markdown/${byteJson.key}.md`, courseReadmeContents);
 
-  writeFileSync(`${srcDirPath}/../generated/guides/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
+  writeFileSync(`${srcDirPath}/../generated/bytes/json/${byteJson.key}.json`, JSON.stringify(byteJson, null, 2));
 }

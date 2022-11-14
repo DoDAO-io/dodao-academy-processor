@@ -1,0 +1,40 @@
+{
+  "id": "/GuideStepSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "content": {
+        "type": "string"
+      },
+      "stepItems": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "$ref": "/QuestionSchema"
+            },
+            {
+              "$ref": "/UserInputSchema"
+            },
+            {
+              "$ref": "/DiscordConnectSchema"
+            }
+          ]
+        }
+      },
+      "name": {
+        "type": "string"
+      },
+      "uuid": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "uuid"
+    ],
+    "additionalProperties": false
+  }
+}

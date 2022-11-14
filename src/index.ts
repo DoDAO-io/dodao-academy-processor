@@ -1,25 +1,18 @@
 import { Command } from 'commander';
 import process from 'process';
+import { generateByteFiles } from './bytes/generators/generateByteFiles';
 import { generateGuideFiles } from './guides/generators/generateGuideFiles';
-import { validateGuides } from './guides/validation/validateGuide';
 
 const program = new Command();
 
 export function validateAndGenerateFiles(srcPath: string) {
   const srcDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
-  validateGuides(srcDirPath);
 
   console.log('Congrats! Everything looks good!');
 
   generateGuideFiles(srcDirPath);
-}
-
-export function validateFiles(srcPath: string) {
-  const srcDirPath = process.cwd() + '/' + srcPath;
-  console.log('Validating Course...');
-  validateGuides(srcDirPath);
-  console.log('Congrats! Everything looks good!');
+  generateByteFiles(srcDirPath);
 }
 
 program
@@ -33,14 +26,6 @@ program
   .argument('<path>', 'path of the course folder')
   .action(async path => {
     validateAndGenerateFiles(path);
-  });
-
-program
-  .command('validate')
-  .description('Validates the course files')
-  .argument('<path>', 'path of the course folder')
-  .action(async path => {
-    validateFiles(path);
   });
 
 program.parse();
