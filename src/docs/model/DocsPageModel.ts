@@ -7,7 +7,8 @@ export interface DocsSubPageModel {
 export interface DocsPageModel {
   name: string;
   key: string;
-  file: string;
+  file?: string;
   folder?: string;
   subPages?: DocsSubPageModel[];
+  link?: string;
 }

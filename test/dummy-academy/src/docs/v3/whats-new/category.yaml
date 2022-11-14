@@ -4,10 +4,10 @@ pages:
     file: portal.md
   - name: Efficiency Mode(eMode)
     key: efficiency-mode-emode
-    file: efficiency-mode-emode
+    file: efficiency-mode-emode.md
   - name: Isolation Mode
     key: isolation-mode
-    file: isolation-mode
+    file: isolation-mode.md
   - name: Siloed Borrowing
     key: siloed-borrowing
     file: siloed-borrowing.md

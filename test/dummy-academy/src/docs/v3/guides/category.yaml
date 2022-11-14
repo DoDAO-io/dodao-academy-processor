@@ -4,7 +4,7 @@ pages:
     file: credit-delegation.md
   - name: Flash Loans
     key: flash-loans
-    file: flash-loans
+    file: flash-loans.md
   - name: Liquidations
     key: liquidations
     file: liquidations.md
@@ -13,7 +13,7 @@ pages:
     file: l2-optimization/README.md
   - name: Testing Guide
     key: testing-guide
-    file: testing-guide
+    file: testing-guide.md
   - name: Governance Guide
     key: governance-guide
     file: governance-guide/README.md

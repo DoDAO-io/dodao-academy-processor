@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import process from 'process';
+import { generateDocs } from './docs/generators/generateDocs';
 import { validateDocs } from './docs/validation/validateDocs';
 import { generateByteFiles } from './bytes/generators/generateByteFiles';
 import { validateBytes } from './bytes/validation/validateByte';
@@ -25,6 +26,9 @@ export function validateAndGenerateFiles(srcPath: string) {
 
   console.log('\nGenerating Guides');
   generateByteFiles(srcDirPath);
+
+  console.log('\nGenerating Docs');
+  generateDocs(srcDirPath);
 }
 
 program

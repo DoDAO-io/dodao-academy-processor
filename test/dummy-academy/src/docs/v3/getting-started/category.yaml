@@ -8,6 +8,7 @@ pages:
   - name: L2 Optimization
     key: l2-optimization
     file: l2-optimization/README.md
+    folder: l2-optimization
     subPages:
       - name: L2Pool
         key: l2pool
@@ -19,6 +20,6 @@ pages:
     key: v3-whitepaper
     link: https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf
   - name: Protocol Features Summary
-    key: protocol-feature-summary.md
-    file: protocol-feature-summary
+    key: protocol-feature-summary
+    file: protocol-feature-summary.md
 
