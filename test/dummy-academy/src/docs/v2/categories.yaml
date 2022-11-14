@@ -1,0 +1,11 @@
+categories:
+  - name: Introduction
+    key: introduction
+    folder: introduction
+  - name: The Core Protocol
+    key: the-core-protocol
+    folder: the-core-protocol
+  - name: Protocol Governance
+    key: protocol-governance
+    folder: protocol-governance
+

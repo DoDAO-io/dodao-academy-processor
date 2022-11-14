@@ -46,6 +46,7 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
 }
 
 export function generateByte(header: string, footer: string, srcDirPath: string, byteToGenerate: string) {
+  console.log(`Generate Byte Files for ${srcDirPath}/bytes/${byteToGenerate}`);
   const file = fs.readFileSync(`${srcDirPath}/bytes/${byteToGenerate}`, 'utf8');
   const byteJson = YAML.parse(file) as GitByteModel;
 

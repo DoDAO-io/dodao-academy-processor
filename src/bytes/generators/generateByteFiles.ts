@@ -6,6 +6,7 @@ import { GitByteModel } from '../model/GitByteModel';
 import { generateByte } from './generateByte';
 
 function generateBytesTable(srcDirPath: string, bytesToGenerate: string[]) {
+  console.log('Generate Bytes Table');
   return bytesToGenerate
     .map((byte, index) => {
       const file = fs.readFileSync(`${srcDirPath}/bytes/${byte}`, 'utf8');
@@ -35,6 +36,7 @@ ${(generateBytesTable(srcDirPath, bytesToGenerate))}
 ${footer} 
 `;
 
+  console.log('Generate Bytes README.md');
   writeFileSync(`${srcDirPath}/../generated/bytes/README.md`, courseReadmeContents);
 }
 

@@ -6,6 +6,7 @@ import { GitGuideModel } from '../model/GitGuideModel';
 import { generateGuide } from './generateGuide';
 
 function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
+  console.log('Generate Guides Table');
   return guidesToGenerate
     .map((guide, index) => {
       const file = fs.readFileSync(`${srcDirPath}/guides/${guide}`, 'utf8');
@@ -35,6 +36,7 @@ ${(generateGuidesTable(srcDirPath, guidesToGenerate))}
 ${footer} 
 `;
 
+  console.log('Generate Guides README.md');
   writeFileSync(`${srcDirPath}/../generated/guides/README.md`, courseReadmeContents);
 }
 

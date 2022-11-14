@@ -1,0 +1,12 @@
+pages:
+  - name: Voting & Governance
+    key: governance-readme
+    file: governance/README.md
+    folder: governance
+    subPages:
+      - name: Creating an asset listing proposal
+        key: propose-your-token-as-new-aave-asset
+        file: propose-your-token-as-new-aave-asset.md
+  - name: Staking AAVE
+    key: staking-aave
+    file: staking-aave.md

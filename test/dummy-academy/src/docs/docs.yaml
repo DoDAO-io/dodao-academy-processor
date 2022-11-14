@@ -1,0 +1,8 @@
+showOnThisPageSection: true
+versions:
+  - name: V1
+    folder: v1
+  - name: V2
+    folder: v2
+  - name: V3 (Current)
+    folder: v3

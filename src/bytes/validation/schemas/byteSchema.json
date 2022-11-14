@@ -7,9 +7,6 @@
       "items": [
         {
           "type": "string"
-        },
-        {
-          "type": "string"
         }
       ]
     },
@@ -22,34 +19,20 @@
     "created": {
       "type": "string"
     },
-    "guideIntegrations": {
-      "$ref": "/GuideIntegrationsSchema"
-    },
-    "guideType": {
-      "type": "string"
-    },
+
     "key": {
       "type": "string"
     },
     "name": {
       "type": "string"
     },
-    "showIncorrectOnCompletion": {
-      "type": "boolean"
-    },
     "steps": {
-      "$ref": "/GuideStepSchema"
+      "$ref": "/ByteStepSchema"
     },
     "publishStatus": {
       "type": "string"
     },
-    "socialShareImage": {
-      "type": "string"
-    },
     "thumbnail": {
-      "type": "string"
-    },
-    "uuid": {
       "type": "string"
     }
   },
@@ -57,14 +40,11 @@
     "categories",
     "content",
     "created",
-    "guideType",
     "key",
     "name",
-    "showIncorrectOnCompletion",
     "steps",
     "publishStatus",
-    "thumbnail",
-    "uuid"
+    "thumbnail"
   ],
   "additionalProperties": false
 }

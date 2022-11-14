@@ -1,0 +1,11 @@
+categories:
+  - name: Getting Started
+    key: getting-started
+    folder: getting-started
+  - name: What's New?
+    key: whats-new
+    folder: the-core-protocol
+  - name: Guides
+    key: guides
+    folder: guides
+

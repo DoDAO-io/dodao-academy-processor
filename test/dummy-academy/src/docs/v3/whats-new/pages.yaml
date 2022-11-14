@@ -1,0 +1,22 @@
+pages:
+  - name: Portal
+    key: portal
+    file: portal.md
+  - name: Efficiency Mode(eMode)
+    key: efficiency-mode-emode
+    file: efficiency-mode-emode
+  - name: Isolation Mode
+    key: isolation-mode
+    file: isolation-mode
+  - name: Siloed Borrowing
+    key: siloed-borrowing
+    file: siloed-borrowing.md
+  - name: Supply Borrow Caps
+    key: supply-borrow-caps
+    file: supply-borrow-caps.md
+  - name: Repay With aTokens
+    key: repay-with-atokens
+    file: repay-with-atokens.md
+  - name: Multiple Rewards and Claim
+    key: multiple-rewards-and-claim
+    file: multiple-rewards-and-claim.md

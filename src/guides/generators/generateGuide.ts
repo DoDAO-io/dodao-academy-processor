@@ -46,6 +46,7 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
 }
 
 export function generateGuide(header: string, footer: string, srcDirPath: string, guideToGenerate: string) {
+  console.log(`Generate Guide Files for ${srcDirPath}/guides/${guideToGenerate}`);
   const file = fs.readFileSync(`${srcDirPath}/guides/${guideToGenerate}`, 'utf8');
   const guideJson = YAML.parse(file) as GitGuideModel;
 

@@ -1,0 +1,36 @@
+pages:
+  - name: Credit Delegation
+    key: credit-delegation
+    file: credit-delegation.md
+  - name: Flash Loans
+    key: flash-loans
+    file: flash-loans
+  - name: Liquidations
+    key: liquidations
+    file: liquidations.md
+  - name: L2 Optimization
+    key: l2-optimization
+    file: l2-optimization/README.md
+  - name: Testing Guide
+    key: testing-guide
+    file: testing-guide
+  - name: Governance Guide
+    key: governance-guide-readme
+    file: governance-guide/README.md
+    subPages:
+      - name: Asset Listing
+        key: asset-listing
+        file: asset-listing.md
+      - name: Rewards
+        key: rewards
+        file: rewards.md
+      - name: Permissions
+        key: permissions
+        file: permissions.md
+      - name: Parameter Tuning
+        key: l2encoder
+        file: l2encoder.md
+  - name: Aavenomics
+    key: aavenomics
+    link: https://aave.com/Aavenomics.pdf
+
