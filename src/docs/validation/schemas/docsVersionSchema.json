@@ -1,0 +1,17 @@
+{
+  "id": "/DocsVersionSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "$ref": "/DocsCategorySchema"
+      }
+    }
+  },
+  "required": [
+    "categories"
+  ],
+  "additionalProperties": false
+}
