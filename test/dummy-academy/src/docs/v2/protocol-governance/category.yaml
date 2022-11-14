@@ -1,6 +1,6 @@
 pages:
   - name: Voting & Governance
-    key: governance-readme
+    key: governance
     file: governance/README.md
     folder: governance
     subPages:

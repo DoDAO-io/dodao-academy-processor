@@ -4,7 +4,7 @@ categories:
     folder: getting-started
   - name: What's New?
     key: whats-new
-    folder: the-core-protocol
+    folder: whats-new
   - name: Guides
     key: guides
     folder: guides

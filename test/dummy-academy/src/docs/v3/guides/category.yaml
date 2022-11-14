@@ -15,8 +15,9 @@ pages:
     key: testing-guide
     file: testing-guide
   - name: Governance Guide
-    key: governance-guide-readme
+    key: governance-guide
     file: governance-guide/README.md
+    folder: governance-guide-readme/README.md
     subPages:
       - name: Asset Listing
         key: asset-listing

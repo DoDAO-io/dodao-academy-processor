@@ -3,41 +3,53 @@ pages:
     key: protocol-overview
     file: protocol-overview.md
   - name: Lending Pool
-    key: lendinpool-readme
+    key: lendinpool
     file: lendinpool/README.md
     folder: lendingpool
     subPages:
       - name: ILendingPool
         file: ilendingpool.md
+        key: ilendingpool
   - name: Address Provider
     file: addresses-provider/README.md
+    key: addresses-provider
     folder: addresses-provider
     subPages: 
       - name: ILendingPoolAddressesProvider
         file: ilendingpooladdressesprovider.md
+        key: ilendingpooladdressesprovider
   - name: Address Provider Registry
     file: addresses-provider-registry/README.md
+    key: addresses-provider-registry
     folder: addresses-provider-registry
     subPages:
       - name: ILendingPoolAddressesProviderRegistry
         file: ilendingpooladdressesproviderregistry.md
+        key: ilendingpooladdressesproviderregistry
   - name: Protocol Data Provider
     file: protocol-data-provider/README.md
+    key: protocol-data-provider
     folder: protocol-data-provider
     subPages:
       - name: IProtocolDataProvider
         file: iprotocoldataprovider.md
+        key: iprotocoldataprovider
   - name: aTokens
     file: atokens/README.md
+    key: atokens
     folder: atokens
-    subpages:
+    subPages:
       - name: IAToken
         file: iatoken.md
+        key: iatoken
   - name: Debt Tokens
     file: debt-tokens/README.md
+    key: debt-tokens
     folder: debt-tokens
-    subpages:
+    subPages:
       - name: IStableDebtToken
         file: istabledebttoken.md
+        key: istabledebttoken
       - name: IVariableDebtToken
         file: ivariabledebttoken.md
+        key: ivariabledebttoken

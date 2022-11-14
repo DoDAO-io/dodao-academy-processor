@@ -3,22 +3,15 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "name": {
-      "type": "string"
-
-    },
-    "folder": {
-      "type": "string"
-    },
-    "key": {
-      "type": "string"
-
+    "pages": {
+      "type": "array",
+      "items": {
+        "$ref": "/DocsPageSchema"
+      }
     }
   },
   "required": [
-    "name",
-    "folder",
-    "key"
+    "pages"
   ],
   "additionalProperties": false
 }

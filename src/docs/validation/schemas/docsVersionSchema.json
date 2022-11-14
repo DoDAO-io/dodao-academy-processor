@@ -5,9 +5,21 @@
   "properties": {
     "categories": {
       "type": "array",
-      "items": {
-        "$ref": "/DocsCategorySchema"
-      }
+      "items": [{
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+
+          }
+        }
+      }]
     }
   },
   "required": [
