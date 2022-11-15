@@ -2,12 +2,13 @@ import { Command } from 'commander';
 import fs from 'fs';
 import process from 'process';
 import YAML from 'yaml';
-import { generateDocs } from './docs/generators/generateDocs';
-import { validateDocs } from './docs/validation/validateDocs';
 import { generateByteFiles } from './bytes/generators/generateByteFiles';
 import { validateBytes } from './bytes/validation/validateByte';
+import { generateDocs } from './docs/generators/generateDocs';
+import { validateDocs } from './docs/validation/validateDocs';
 import { generateGuideFiles } from './guides/generators/generateGuideFiles';
 import { validateGuides } from './guides/validation/validateGuide';
+import { writeFileSync } from './utils/writeFileSync';
 
 const program = new Command();
 
@@ -58,6 +59,8 @@ export function validateAndGenerateFiles(srcPath: string) {
     console.log('\nGenerating Docs');
     generateDocs(`${srcDirPath}/docs/${docElement.folder}`, `${srcDirPath}/../generated/docs/${docElement.folder}`, 'src/docs/' + docElement.folder);
   }
+
+  writeFileSync(`${srcDirPath}/../generated/academy.json`, JSON.stringify(academyModel, null, 2));
 }
 
 program
