@@ -18,8 +18,8 @@ function generateBytesTable(srcDirPath: string, bytesToGenerate: string[]) {
     .join('\n ');
 }
 
-function generateBytes(header: string, footer: string, srcDirPath: string, bytesToGenerate: string[]) {
-  bytesToGenerate.forEach(byte => generateByte(header, footer, srcDirPath, byte));
+function generateBytes(header: string, footer: string, srcDirPath: string, generatedDirPath: string, bytesToGenerate: string[]) {
+  bytesToGenerate.forEach(byte => generateByte(header, footer, srcDirPath, generatedDirPath, byte));
 
   // prettier-ignore
   const courseReadmeContents =
@@ -37,7 +37,7 @@ ${footer}
 `;
 
   console.log('Generate Bytes README.md');
-  writeFileSync(`${srcDirPath}/../generated/bytes/README.md`, courseReadmeContents);
+  writeFileSync(`${generatedDirPath}/bytes/README.md`, courseReadmeContents);
 }
 
 function createDirectories(courseDirPath: string) {
@@ -56,7 +56,7 @@ function createDirectories(courseDirPath: string) {
   });
 }
 
-export function generateByteFiles(srcDirPath: string) {
+export function generateByteFiles(srcDirPath: string, generatedDirPath: string) {
   const bytesFile = fs.readFileSync(`${srcDirPath}/bytes/bytes.yaml`, 'utf8');
   const header = fs.readFileSync(`${srcDirPath}/bytes/bytes-header.md`, 'utf8');
   const footer = fs.readFileSync(`${srcDirPath}/bytes/bytes-footer.md`, 'utf8');
@@ -64,10 +64,10 @@ export function generateByteFiles(srcDirPath: string) {
   createDirectories(srcDirPath);
 
   const bytesToGenerate = YAML.parse(bytesFile).bytes as string[];
-  generateBytes(header, footer, srcDirPath, bytesToGenerate);
+  generateBytes(header, footer, srcDirPath, generatedDirPath, bytesToGenerate);
 
   writeFileSync(
-    `${srcDirPath}/../generated/bytes/json/bytes.json`,
+    `${generatedDirPath}/bytes/json/bytes.json`,
     JSON.stringify(
       bytesToGenerate.map(byte => byte.replace('.yaml', '.json')),
       null,

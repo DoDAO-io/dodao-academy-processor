@@ -2,11 +2,11 @@ import fs from 'fs';
 import YAML from 'yaml';
 import { GitByteModel } from '../model/GitByteModel';
 
-export function validateUniqueUUIDs(srcDirPath: string, bytesJson: string[]) {
+export function validateUniqueUUIDs(bytesSrcDir: string, bytesJson: string[]) {
   const uuids: string[] = [];
 
   bytesJson.forEach(byte => {
-    const byteFilePath = `${srcDirPath}/bytes/${byte}`;
+    const byteFilePath = `${bytesSrcDir}/${byte}`;
     const file = fs.readFileSync(byteFilePath, 'utf8');
     const byteJson = YAML.parse(file) as GitByteModel;
     if (uuids.includes(byteJson.uuid)) {

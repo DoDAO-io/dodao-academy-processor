@@ -13,19 +13,19 @@ export function validateAndGenerateFiles(srcPath: string) {
   const srcDirPath = process.cwd() + '/' + srcPath;
 
   console.log('\nValidating Bytes');
-  validateBytes(srcDirPath);
+  validateBytes(srcDirPath + '/bytes/main');
 
   console.log('\nValidating Guides');
-  validateGuides(srcDirPath);
+  validateGuides(srcDirPath + '/guides/main');
 
   console.log('\nValidating Docs');
-  validateDocs(srcDirPath);
+  validateDocs(srcDirPath + '/docs/main');
 
   console.log('\nGenerating Bytes');
   generateGuideFiles(srcDirPath);
 
   console.log('\nGenerating Guides');
-  generateByteFiles(srcDirPath);
+  generateByteFiles(srcDirPath + '/main', `${srcDirPath}/../generated/main`);
 
   console.log('\nGenerating Docs');
   generateDocs(srcDirPath);

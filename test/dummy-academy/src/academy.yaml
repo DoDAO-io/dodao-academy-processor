@@ -1,9 +1,15 @@
 bytes:
-  - name: Main
+  - name: Bytes
+    content: Twitter style learning lessons
     folder: main
+    key: main
 guides:
-  - name: Main
+  - name: Guides
+    content: If you want to know about some specific topics but don't have a lot of time to read, try looking at these guides that are 5 minutes or less
     folder: main
+    key: main
 docs:
-  - name: Main
+  - name: Docs
+    content: Similar to a book and covers each and every detail
     folder: main
+    key: main

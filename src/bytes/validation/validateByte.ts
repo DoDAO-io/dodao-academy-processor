@@ -28,12 +28,12 @@ export function validateByte(byteFilePath: string) {
   }
 }
 
-export function validateBytes(srcDirPath: string) {
-  const file = fs.readFileSync(`${srcDirPath}/bytes/bytes.yaml`, 'utf8');
+export function validateBytes(bytesSrcDir: string) {
+  const file = fs.readFileSync(`${bytesSrcDir}/bytes.yaml`, 'utf8');
   const byteJson = YAML.parse(file).bytes as string[];
 
-  validateUniqueUUIDs(srcDirPath, byteJson);
+  validateUniqueUUIDs(bytesSrcDir, byteJson);
   byteJson.forEach(byte => {
-    validateByte(`${srcDirPath}/bytes/${byte}`);
+    validateByte(`${bytesSrcDir}/${byte}`);
   });
 }

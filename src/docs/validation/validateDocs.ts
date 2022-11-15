@@ -44,8 +44,8 @@ export function validateVersion(versionFolderPath: string) {
   });
 }
 
-export function validateDocs(srcDirPath: string) {
-  const file = fs.readFileSync(`${srcDirPath}/docs/docs.yaml`, 'utf8');
+export function validateDocs(docsSrcDir: string) {
+  const file = fs.readFileSync(`${docsSrcDir}/docs.yaml`, 'utf8');
   const docsJson = YAML.parse(file) as DocsModel;
 
   const v = new Validator();
@@ -56,9 +56,9 @@ export function validateDocs(srcDirPath: string) {
   });
 
   if (!res.valid || res.errors.length > 0) {
-    throwValidationError(`${srcDirPath}/docs/docs.yaml`, res.errors);
+    throwValidationError(`${docsSrcDir}/docs.yaml`, res.errors);
   }
   docsJson.versions.forEach(byte => {
-    validateVersion(`${srcDirPath}/docs/${byte.folder}`);
+    validateVersion(`${docsSrcDir}/${byte.folder}`);
   });
 }
