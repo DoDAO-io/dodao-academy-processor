@@ -2,6 +2,7 @@
   "bytes": [
     {
       "name": "Bytes",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
       "content": "Twitter style learning lessons",
       "folder": "main",
       "key": "main"
@@ -10,6 +11,7 @@
   "guides": [
     {
       "name": "Guides",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
       "content": "If you want to know about some specific topics but don't have a lot of time to read, try looking at these guides that are 5 minutes or less",
       "folder": "main",
       "key": "main"
@@ -18,7 +20,17 @@
   "docs": [
     {
       "name": "Docs",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
       "content": "Similar to a book and covers each and every detail",
+      "folder": "main",
+      "key": "main"
+    }
+  ],
+  "timelines": [
+    {
+      "name": "Timelines",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
+      "content": "Shows the important events and updates happening on the project",
       "folder": "main",
       "key": "main"
     }

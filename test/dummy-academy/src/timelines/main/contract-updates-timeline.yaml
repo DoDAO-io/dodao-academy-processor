@@ -1,0 +1,33 @@
+key: aave-smart-contracts-timeline
+name: AAVE Smart Contract Updates
+excerpt: Captures timeline of all the major updates
+content: Captures timeline of all the major updates
+thumbnail: ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8
+created: '2022-11-15T20:00:13.043Z'
+publishStatus: Live
+events:
+  - name: Some Event 1
+    key: event-1
+    date: '2022-11-15T20:00:13.043Z'
+    excerpt: Excerpt
+    content: Some more details
+  - name: Some Event 2
+    key: event-2
+    date: '2022-10-15T20:00:13.043Z'
+    excerpt: Excerpt
+    content: Some more details
+  - name: Some Event 3
+    key: event-3
+    date: '2022-09-15T20:00:13.043Z'
+    excerpt: Excerpt
+    content: Some more details
+  - name: Some Event 4
+    key: event-4
+    date: '2022-08-15T20:00:13.043Z'
+    excerpt: Excerpt
+    content: Some more details
+  - name: Some Event 5
+    key: event-5
+    date: '2022-07-15T20:00:13.043Z'
+    excerpt: Excerpt
+    content: Some more details

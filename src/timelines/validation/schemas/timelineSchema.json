@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "/TimelineEventSchema"
+      }
+
+    },
+    "publishStatus": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "key",
+    "name",
+    "excerpt",
+    "content",
+    "thumbnail",
+    "created",
+    "publishStatus",
+    "events"
+  ],
+  "additionalProperties": false
+}
