@@ -68,7 +68,7 @@ function versionGraph(srcDirPath: string, docsRelativeDir: string, version: Docs
 
 export function generateDocs(docsSrcDir: string, docsOutDir: string, docsRelativeDir: string): void {
   fs.rmSync(docsOutDir, { recursive: true, force: true });
-  fs.mkdirSync(docsOutDir);
+  fs.mkdirSync(docsOutDir, { recursive: true });
 
   const file = fs.readFileSync(`${docsSrcDir}/docs.yaml`, 'utf8');
   const docsJson = YAML.parse(file) as DocsModel;
@@ -82,5 +82,6 @@ export function generateDocs(docsSrcDir: string, docsOutDir: string, docsRelativ
     ),
   };
 
+  console.log(`Writing ${docsOutDir}/docs.json`);
   writeFileSync(`${docsOutDir}/docs.json`, JSON.stringify(docsGraph, null, 2));
 }

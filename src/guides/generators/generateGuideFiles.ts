@@ -47,7 +47,7 @@ function createDirectories(guidesOutDir: string) {
 
   foldersToGenerate.forEach(folder => {
     if (!fs.existsSync(folder)) {
-      fs.mkdirSync(folder);
+      fs.mkdirSync(folder, { recursive: true });
     }
   });
 }

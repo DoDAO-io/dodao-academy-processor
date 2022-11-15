@@ -1,5 +1,7 @@
 import { Command } from 'commander';
+import fs from 'fs';
 import process from 'process';
+import YAML from 'yaml';
 import { generateDocs } from './docs/generators/generateDocs';
 import { validateDocs } from './docs/validation/validateDocs';
 import { generateByteFiles } from './bytes/generators/generateByteFiles';
@@ -9,26 +11,53 @@ import { validateGuides } from './guides/validation/validateGuide';
 
 const program = new Command();
 
+interface AcademyContentModel {
+  name: string;
+  content: string;
+  folder: string;
+  key: string;
+}
+
+export interface AcademyModel {
+  guides: AcademyContentModel[];
+  bytes: AcademyContentModel[];
+  docs: AcademyContentModel[];
+}
 export function validateAndGenerateFiles(srcPath: string) {
   const srcDirPath = process.cwd() + '/' + srcPath;
 
-  console.log('\nValidating Guides');
-  validateGuides(srcDirPath + '/guides/main');
+  let academyFile = fs.readFileSync(`${srcDirPath}/academy.yaml`, 'utf8');
+  const academyModel: AcademyModel = YAML.parse(academyFile);
 
-  console.log('\nValidating Bytes');
-  validateBytes(srcDirPath + '/bytes/main');
+  for (const guideElement of academyModel.guides) {
+    console.log('\nValidating Guides :', guideElement.key);
+    validateGuides(`${srcDirPath}/guides/${guideElement.folder}`);
+  }
 
-  console.log('\nValidating Docs');
-  validateDocs(srcDirPath + '/docs/main');
+  for (const byteElement of academyModel.bytes) {
+    console.log('\nValidating bytes :', byteElement.key);
+    validateBytes(`${srcDirPath}/bytes/${byteElement.folder}`);
+  }
 
-  console.log('\nGenerating Guides');
-  generateGuideFiles(srcDirPath + '/guides/main', srcDirPath + '/../generated/guides/main');
+  for (const docElement of academyModel.docs) {
+    console.log('\nValidating Docs :', docElement.key);
+    validateDocs(`${srcDirPath}/docs/${docElement.folder}`);
+  }
 
-  console.log('\nGenerating Bytes');
-  generateByteFiles(srcDirPath + '/bytes/main', `${srcDirPath}/../generated/bytes/main`);
+  for (const guideElement of academyModel.guides) {
+    console.log('\nGenerating Guides');
+    generateGuideFiles(`${srcDirPath}/guides/${guideElement.folder}`, `${srcDirPath}/../generated/guides/${guideElement.folder}`);
+  }
 
-  console.log('\nGenerating Docs');
-  generateDocs(srcDirPath + '/docs/main', `${srcDirPath}/../generated/docs/main`, 'src/docs/main');
+  for (const byteElement of academyModel.bytes) {
+    console.log('\nGenerating Bytes');
+    generateByteFiles(`${srcDirPath}/bytes/${byteElement.folder}`, `${srcDirPath}/../generated/bytes/${byteElement.folder}`);
+  }
+
+  for (const docElement of academyModel.docs) {
+    console.log('\nGenerating Docs');
+    generateDocs(`${srcDirPath}/docs/${docElement.folder}`, `${srcDirPath}/../generated/docs/${docElement.folder}`, 'src/docs/' + docElement.folder);
+  }
 }
 
 program
