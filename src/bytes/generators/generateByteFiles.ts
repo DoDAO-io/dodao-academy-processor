@@ -9,7 +9,7 @@ function generateBytesTable(srcDirPath: string, bytesToGenerate: string[]) {
   console.log('Generate Bytes Table');
   return bytesToGenerate
     .map((byte, index) => {
-      const file = fs.readFileSync(`${srcDirPath}/bytes/${byte}`, 'utf8');
+      const file = fs.readFileSync(`${srcDirPath}/${byte}`, 'utf8');
       const byteJson = YAML.parse(file) as GitByteModel;
 
       const fileLink = `[Link](markdown/${byteJson.key}.md)`;
@@ -37,17 +37,13 @@ ${footer}
 `;
 
   console.log('Generate Bytes README.md');
-  writeFileSync(`${generatedDirPath}/bytes/README.md`, courseReadmeContents);
+  writeFileSync(`${generatedDirPath}/README.md`, courseReadmeContents);
 }
 
-function createDirectories(courseDirPath: string) {
-  const generatedFolder = `${courseDirPath}/../generated/bytes`;
-  fs.rmSync(generatedFolder, { recursive: true, force: true });
+function createDirectories(bytesOutDir: string) {
+  fs.rmSync(bytesOutDir, { recursive: true, force: true });
 
-  const markdown = `${courseDirPath}/../generated/bytes/markdown`;
-  const json = `${courseDirPath}/../generated/bytes/json`;
-
-  const foldersToGenerate = [generatedFolder, markdown, json];
+  const foldersToGenerate = [bytesOutDir, `${bytesOutDir}/markdown`, `${bytesOutDir}/json`];
 
   foldersToGenerate.forEach(folder => {
     if (!fs.existsSync(folder)) {
@@ -56,18 +52,18 @@ function createDirectories(courseDirPath: string) {
   });
 }
 
-export function generateByteFiles(srcDirPath: string, generatedDirPath: string) {
-  const bytesFile = fs.readFileSync(`${srcDirPath}/bytes/bytes.yaml`, 'utf8');
-  const header = fs.readFileSync(`${srcDirPath}/bytes/bytes-header.md`, 'utf8');
-  const footer = fs.readFileSync(`${srcDirPath}/bytes/bytes-footer.md`, 'utf8');
+export function generateByteFiles(bytesSrcDir: string, bytesOutDir: string) {
+  const bytesFile = fs.readFileSync(`${bytesSrcDir}/bytes.yaml`, 'utf8');
+  const header = fs.readFileSync(`${bytesSrcDir}/bytes-header.md`, 'utf8');
+  const footer = fs.readFileSync(`${bytesSrcDir}/bytes-footer.md`, 'utf8');
 
-  createDirectories(srcDirPath);
+  createDirectories(bytesOutDir);
 
   const bytesToGenerate = YAML.parse(bytesFile).bytes as string[];
-  generateBytes(header, footer, srcDirPath, generatedDirPath, bytesToGenerate);
+  generateBytes(header, footer, bytesSrcDir, bytesOutDir, bytesToGenerate);
 
   writeFileSync(
-    `${generatedDirPath}/bytes/json/bytes.json`,
+    `${bytesOutDir}/json/bytes.json`,
     JSON.stringify(
       bytesToGenerate.map(byte => byte.replace('.yaml', '.json')),
       null,

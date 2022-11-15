@@ -45,9 +45,9 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateByte(header: string, footer: string, srcDirPath: string, generatedDirPath: string, byteToGenerate: string) {
-  console.log(`Generate Byte Files for ${srcDirPath}/bytes/${byteToGenerate}`);
-  const file = fs.readFileSync(`${srcDirPath}/bytes/${byteToGenerate}`, 'utf8');
+export function generateByte(header: string, footer: string, bytesSrcDir: string, bytesOutPath: string, byteToGenerate: string) {
+  console.log(`Generate Byte Files for ${bytesSrcDir}/${byteToGenerate}`);
+  const file = fs.readFileSync(`${bytesSrcDir}/${byteToGenerate}`, 'utf8');
   const byteJson = YAML.parse(file) as GitByteModel;
 
   const courseReadmeContents = dedent`${header}
@@ -74,7 +74,7 @@ ${footer}
    
 `;
 
-  writeFileSync(`${generatedDirPath}/bytes/markdown/${byteJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${bytesOutPath}/markdown/${byteJson.key}.md`, courseReadmeContents);
 
-  writeFileSync(`${generatedDirPath}/bytes/json/${byteJson.key}.json`, JSON.stringify(byteJson, null, 2));
+  writeFileSync(`${bytesOutPath}/json/${byteJson.key}.json`, JSON.stringify(byteJson, null, 2));
 }

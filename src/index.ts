@@ -25,10 +25,10 @@ export function validateAndGenerateFiles(srcPath: string) {
   generateGuideFiles(srcDirPath + '/guides/main', srcDirPath + '/../generated/guides/main');
 
   console.log('\nGenerating Bytes');
-  generateByteFiles(srcDirPath + '/main', `${srcDirPath}/../generated/main`);
+  generateByteFiles(srcDirPath + '/bytes/main', `${srcDirPath}/../generated/bytes/main`);
 
   console.log('\nGenerating Docs');
-  generateDocs(srcDirPath);
+  generateDocs(srcDirPath + '/docs/main', `${srcDirPath}/../generated/docs/main`, 'src/docs/main');
 }
 
 program

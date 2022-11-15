@@ -14,7 +14,7 @@
               "name": "Overview",
               "key": "introduction",
               "file": "introduction.md",
-              "pageFullFilePath": "src/docs/v2/introduction/introduction.md"
+              "pageFullFilePath": "src/docs/main/v2/introduction/introduction.md"
             }
           ]
         },
@@ -27,7 +27,7 @@
               "name": "Protocol Overview",
               "key": "protocol-overview",
               "file": "protocol-overview.md",
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/protocol-overview.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/protocol-overview.md"
             },
             {
               "name": "Lending Pool",
@@ -39,10 +39,10 @@
                   "name": "ILendingPool",
                   "file": "ilendingpool.md",
                   "key": "ilendingpool",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/lendingpool/ilendingpool.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/lendingpool/ilendingpool.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/lendinpool/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/lendinpool/README.md"
             },
             {
               "name": "Address Provider",
@@ -54,10 +54,10 @@
                   "name": "ILendingPoolAddressesProvider",
                   "file": "ilendingpooladdressesprovider.md",
                   "key": "ilendingpooladdressesprovider",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/addresses-provider/ilendingpooladdressesprovider.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/addresses-provider/ilendingpooladdressesprovider.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/addresses-provider/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/addresses-provider/README.md"
             },
             {
               "name": "Address Provider Registry",
@@ -69,10 +69,10 @@
                   "name": "ILendingPoolAddressesProviderRegistry",
                   "file": "ilendingpooladdressesproviderregistry.md",
                   "key": "ilendingpooladdressesproviderregistry",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/addresses-provider-registry/ilendingpooladdressesproviderregistry.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/addresses-provider-registry/ilendingpooladdressesproviderregistry.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/addresses-provider-registry/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/addresses-provider-registry/README.md"
             },
             {
               "name": "Protocol Data Provider",
@@ -84,10 +84,10 @@
                   "name": "IProtocolDataProvider",
                   "file": "iprotocoldataprovider.md",
                   "key": "iprotocoldataprovider",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/protocol-data-provider/iprotocoldataprovider.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/protocol-data-provider/iprotocoldataprovider.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/protocol-data-provider/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/protocol-data-provider/README.md"
             },
             {
               "name": "aTokens",
@@ -99,10 +99,10 @@
                   "name": "IAToken",
                   "file": "iatoken.md",
                   "key": "iatoken",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/atokens/iatoken.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/atokens/iatoken.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/atokens/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/atokens/README.md"
             },
             {
               "name": "Debt Tokens",
@@ -114,16 +114,16 @@
                   "name": "IStableDebtToken",
                   "file": "istabledebttoken.md",
                   "key": "istabledebttoken",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/debt-tokens/istabledebttoken.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/debt-tokens/istabledebttoken.md"
                 },
                 {
                   "name": "IVariableDebtToken",
                   "file": "ivariabledebttoken.md",
                   "key": "ivariabledebttoken",
-                  "subPageFullFilePath": "src/docs/v2/the-core-protocol/debt-tokens/ivariabledebttoken.md"
+                  "subPageFullFilePath": "src/docs/main/v2/the-core-protocol/debt-tokens/ivariabledebttoken.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/the-core-protocol/debt-tokens/README.md"
+              "pageFullFilePath": "src/docs/main/v2/the-core-protocol/debt-tokens/README.md"
             }
           ]
         },
@@ -142,16 +142,16 @@
                   "name": "Creating an asset listing proposal",
                   "key": "propose-your-token-as-new-aave-asset",
                   "file": "propose-your-token-as-new-aave-asset.md",
-                  "subPageFullFilePath": "src/docs/v2/protocol-governance/governance/propose-your-token-as-new-aave-asset.md"
+                  "subPageFullFilePath": "src/docs/main/v2/protocol-governance/governance/propose-your-token-as-new-aave-asset.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v2/protocol-governance/governance/README.md"
+              "pageFullFilePath": "src/docs/main/v2/protocol-governance/governance/README.md"
             },
             {
               "name": "Staking AAVE",
               "key": "staking-aave",
               "file": "staking-aave.md",
-              "pageFullFilePath": "src/docs/v2/protocol-governance/staking-aave.md"
+              "pageFullFilePath": "src/docs/main/v2/protocol-governance/staking-aave.md"
             }
           ]
         }
@@ -171,13 +171,13 @@
               "name": "Introduction",
               "key": "introduction",
               "file": "introduction.md",
-              "pageFullFilePath": "src/docs/v3/getting-started/introduction.md"
+              "pageFullFilePath": "src/docs/main/v3/getting-started/introduction.md"
             },
             {
               "name": "Contracts Overview",
               "key": "contracts-overview",
               "file": "contracts-overview.md",
-              "pageFullFilePath": "src/docs/v3/getting-started/contracts-overview.md"
+              "pageFullFilePath": "src/docs/main/v3/getting-started/contracts-overview.md"
             },
             {
               "name": "L2 Optimization",
@@ -189,16 +189,16 @@
                   "name": "L2Pool",
                   "key": "l2pool",
                   "file": "l2pool.md",
-                  "subPageFullFilePath": "src/docs/v3/getting-started/l2-optimization/l2pool.md"
+                  "subPageFullFilePath": "src/docs/main/v3/getting-started/l2-optimization/l2pool.md"
                 },
                 {
                   "name": "L2Encoder",
                   "key": "l2encoder",
                   "file": "l2encoder.md",
-                  "subPageFullFilePath": "src/docs/v3/getting-started/l2-optimization/l2encoder.md"
+                  "subPageFullFilePath": "src/docs/main/v3/getting-started/l2-optimization/l2encoder.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v3/getting-started/l2-optimization/README.md"
+              "pageFullFilePath": "src/docs/main/v3/getting-started/l2-optimization/README.md"
             },
             {
               "name": "V3 Whitepaper",
@@ -209,7 +209,7 @@
               "name": "Protocol Features Summary",
               "key": "protocol-feature-summary",
               "file": "protocol-feature-summary.md",
-              "pageFullFilePath": "src/docs/v3/getting-started/protocol-feature-summary.md"
+              "pageFullFilePath": "src/docs/main/v3/getting-started/protocol-feature-summary.md"
             }
           ]
         },
@@ -222,43 +222,43 @@
               "name": "Portal",
               "key": "portal",
               "file": "portal.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/portal.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/portal.md"
             },
             {
               "name": "Efficiency Mode(eMode)",
               "key": "efficiency-mode-emode",
               "file": "efficiency-mode-emode.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/efficiency-mode-emode.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/efficiency-mode-emode.md"
             },
             {
               "name": "Isolation Mode",
               "key": "isolation-mode",
               "file": "isolation-mode.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/isolation-mode.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/isolation-mode.md"
             },
             {
               "name": "Siloed Borrowing",
               "key": "siloed-borrowing",
               "file": "siloed-borrowing.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/siloed-borrowing.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/siloed-borrowing.md"
             },
             {
               "name": "Supply Borrow Caps",
               "key": "supply-borrow-caps",
               "file": "supply-borrow-caps.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/supply-borrow-caps.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/supply-borrow-caps.md"
             },
             {
               "name": "Repay With aTokens",
               "key": "repay-with-atokens",
               "file": "repay-with-atokens.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/repay-with-atokens.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/repay-with-atokens.md"
             },
             {
               "name": "Multiple Rewards and Claim",
               "key": "multiple-rewards-and-claim",
               "file": "multiple-rewards-and-claim.md",
-              "pageFullFilePath": "src/docs/v3/whats-new/multiple-rewards-and-claim.md"
+              "pageFullFilePath": "src/docs/main/v3/whats-new/multiple-rewards-and-claim.md"
             }
           ]
         },
@@ -271,31 +271,31 @@
               "name": "Credit Delegation",
               "key": "credit-delegation",
               "file": "credit-delegation.md",
-              "pageFullFilePath": "src/docs/v3/guides/credit-delegation.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/credit-delegation.md"
             },
             {
               "name": "Flash Loans",
               "key": "flash-loans",
               "file": "flash-loans.md",
-              "pageFullFilePath": "src/docs/v3/guides/flash-loans.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/flash-loans.md"
             },
             {
               "name": "Liquidations",
               "key": "liquidations",
               "file": "liquidations.md",
-              "pageFullFilePath": "src/docs/v3/guides/liquidations.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/liquidations.md"
             },
             {
               "name": "L2 Optimization",
               "key": "l2-optimization",
               "file": "l2-optimization/README.md",
-              "pageFullFilePath": "src/docs/v3/guides/l2-optimization/README.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/l2-optimization/README.md"
             },
             {
               "name": "Testing Guide",
               "key": "testing-guide",
               "file": "testing-guide.md",
-              "pageFullFilePath": "src/docs/v3/guides/testing-guide.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/testing-guide.md"
             },
             {
               "name": "Governance Guide",
@@ -307,28 +307,28 @@
                   "name": "Asset Listing",
                   "key": "asset-listing",
                   "file": "asset-listing.md",
-                  "subPageFullFilePath": "src/docs/v3/guides/governance-guide-readme/README.md/asset-listing.md"
+                  "subPageFullFilePath": "src/docs/main/v3/guides/governance-guide-readme/README.md/asset-listing.md"
                 },
                 {
                   "name": "Rewards",
                   "key": "rewards",
                   "file": "rewards.md",
-                  "subPageFullFilePath": "src/docs/v3/guides/governance-guide-readme/README.md/rewards.md"
+                  "subPageFullFilePath": "src/docs/main/v3/guides/governance-guide-readme/README.md/rewards.md"
                 },
                 {
                   "name": "Permissions",
                   "key": "permissions",
                   "file": "permissions.md",
-                  "subPageFullFilePath": "src/docs/v3/guides/governance-guide-readme/README.md/permissions.md"
+                  "subPageFullFilePath": "src/docs/main/v3/guides/governance-guide-readme/README.md/permissions.md"
                 },
                 {
                   "name": "Parameter Tuning",
                   "key": "l2encoder",
                   "file": "l2encoder.md",
-                  "subPageFullFilePath": "src/docs/v3/guides/governance-guide-readme/README.md/l2encoder.md"
+                  "subPageFullFilePath": "src/docs/main/v3/guides/governance-guide-readme/README.md/l2encoder.md"
                 }
               ],
-              "pageFullFilePath": "src/docs/v3/guides/governance-guide/README.md"
+              "pageFullFilePath": "src/docs/main/v3/guides/governance-guide/README.md"
             },
             {
               "name": "Aavenomics",
