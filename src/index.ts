@@ -12,19 +12,19 @@ const program = new Command();
 export function validateAndGenerateFiles(srcPath: string) {
   const srcDirPath = process.cwd() + '/' + srcPath;
 
-  console.log('\nValidating Bytes');
-  validateBytes(srcDirPath + '/bytes/main');
-
   console.log('\nValidating Guides');
   validateGuides(srcDirPath + '/guides/main');
+
+  console.log('\nValidating Bytes');
+  validateBytes(srcDirPath + '/bytes/main');
 
   console.log('\nValidating Docs');
   validateDocs(srcDirPath + '/docs/main');
 
-  console.log('\nGenerating Bytes');
-  generateGuideFiles(srcDirPath);
-
   console.log('\nGenerating Guides');
+  generateGuideFiles(srcDirPath + '/guides/main', srcDirPath + '/../generated/guides/main');
+
+  console.log('\nGenerating Bytes');
   generateByteFiles(srcDirPath + '/main', `${srcDirPath}/../generated/main`);
 
   console.log('\nGenerating Docs');

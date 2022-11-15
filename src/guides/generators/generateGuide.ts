@@ -45,9 +45,9 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateGuide(header: string, footer: string, srcDirPath: string, guideToGenerate: string) {
-  console.log(`Generate Guide Files for ${srcDirPath}/guides/${guideToGenerate}`);
-  const file = fs.readFileSync(`${srcDirPath}/guides/${guideToGenerate}`, 'utf8');
+export function generateGuide(header: string, footer: string, guidesSrcDir: string, guidesOutDir: string, guideToGenerate: string) {
+  console.log(`Generate Guide Files for ${guidesSrcDir}/${guideToGenerate}`);
+  const file = fs.readFileSync(`${guidesSrcDir}/${guideToGenerate}`, 'utf8');
   const guideJson = YAML.parse(file) as GitGuideModel;
 
   const courseReadmeContents = dedent`${header}
@@ -74,7 +74,7 @@ ${footer}
    
 `;
 
-  writeFileSync(`${srcDirPath}/../generated/guides/markdown/${guideJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${guidesOutDir}/markdown/${guideJson.key}.md`, courseReadmeContents);
 
-  writeFileSync(`${srcDirPath}/../generated/guides/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
+  writeFileSync(`${guidesOutDir}/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
 }

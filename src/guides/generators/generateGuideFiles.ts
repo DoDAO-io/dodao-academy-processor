@@ -5,11 +5,11 @@ import { writeFileSync } from '../../utils/writeFileSync';
 import { GitGuideModel } from '../model/GitGuideModel';
 import { generateGuide } from './generateGuide';
 
-function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
+function generateGuidesTable(guidesSrcDir: string, guidesToGenerate: string[]) {
   console.log('Generate Guides Table');
   return guidesToGenerate
     .map((guide, index) => {
-      const file = fs.readFileSync(`${srcDirPath}/guides/${guide}`, 'utf8');
+      const file = fs.readFileSync(`${guidesSrcDir}/${guide}`, 'utf8');
       const guideJson = YAML.parse(file) as GitGuideModel;
 
       const fileLink = `[Link](markdown/${guideJson.key}.md)`;
@@ -18,8 +18,8 @@ function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
     .join('\n ');
 }
 
-function generateGuides(header: string, footer: string, srcDirPath: string, guidesToGenerate: string[]) {
-  guidesToGenerate.forEach(guide => generateGuide(header, footer, srcDirPath, guide));
+function generateGuides(header: string, footer: string, guidesSrcDir: string, guidesOutDir: string, guidesToGenerate: string[]) {
+  guidesToGenerate.forEach(guide => generateGuide(header, footer, guidesSrcDir, guidesOutDir, guide));
 
   // prettier-ignore
   const courseReadmeContents =
@@ -30,24 +30,20 @@ function generateGuides(header: string, footer: string, srcDirPath: string, guid
 
 | S.No        | Title       |  Details  |  Link  |
 | ----------- | ----------- |----------- | ----------- |
-${(generateGuidesTable(srcDirPath, guidesToGenerate))}
+${(generateGuidesTable(guidesSrcDir, guidesToGenerate))}
 
 ---
 ${footer} 
 `;
 
   console.log('Generate Guides README.md');
-  writeFileSync(`${srcDirPath}/../generated/guides/README.md`, courseReadmeContents);
+  writeFileSync(`${guidesOutDir}/README.md`, courseReadmeContents);
 }
 
-function createDirectories(courseDirPath: string) {
-  const generatedFolder = `${courseDirPath}/../generated/guides`;
-  fs.rmSync(generatedFolder, { recursive: true, force: true });
+function createDirectories(guidesOutDir: string) {
+  fs.rmSync(guidesOutDir, { recursive: true, force: true });
 
-  const markdown = `${courseDirPath}/../generated/guides/markdown`;
-  const json = `${courseDirPath}/../generated/guides/json`;
-
-  const foldersToGenerate = [generatedFolder, markdown, json];
+  const foldersToGenerate = [guidesOutDir, `${guidesOutDir}/markdown`, `${guidesOutDir}/json`];
 
   foldersToGenerate.forEach(folder => {
     if (!fs.existsSync(folder)) {
@@ -56,18 +52,18 @@ function createDirectories(courseDirPath: string) {
   });
 }
 
-export function generateGuideFiles(srcDirPath: string) {
-  const guidesFile = fs.readFileSync(`${srcDirPath}/guides/guides.yaml`, 'utf8');
-  const header = fs.readFileSync(`${srcDirPath}/guides/guides-header.md`, 'utf8');
-  const footer = fs.readFileSync(`${srcDirPath}/guides/guides-footer.md`, 'utf8');
+export function generateGuideFiles(guidesSrcDir: string, guidesOutDir: string) {
+  const guidesFile = fs.readFileSync(`${guidesSrcDir}/guides.yaml`, 'utf8');
+  const header = fs.readFileSync(`${guidesSrcDir}/guides-header.md`, 'utf8');
+  const footer = fs.readFileSync(`${guidesSrcDir}/guides-footer.md`, 'utf8');
 
-  createDirectories(srcDirPath);
+  createDirectories(guidesOutDir);
 
   const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
-  generateGuides(header, footer, srcDirPath, guidesToGenerate);
+  generateGuides(header, footer, guidesSrcDir, guidesOutDir, guidesToGenerate);
 
   writeFileSync(
-    `${srcDirPath}/../generated/guides/json/guides.json`,
+    `${guidesOutDir}/json/guides.json`,
     JSON.stringify(
       guidesToGenerate.map(guide => guide.replace('.yaml', '.json')),
       null,
