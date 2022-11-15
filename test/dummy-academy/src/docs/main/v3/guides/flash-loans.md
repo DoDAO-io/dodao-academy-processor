@@ -64,11 +64,11 @@ To call either of the two flash loan methods on the Pool, we need to pass in the
 
 1.  #### From an EOA ('normal' ethereum account)
 
-    To use an EOA, send a transaction to the relevant `Pool` calling the `flashLoan()` or `flashLoanSimple()` function. See [Pool api docs](../core-contracts/pool.md) for parameter details, ensuring you use your contract address from [step 1](flash-loans.md#1.-setting-up) for the `receiverAddress`.\
+    To use an EOA, send a transaction to the relevant `Pool` calling the `flashLoan()` or `flashLoanSimple()` function. See [Pool api docs](../core-contracts/pool.md) for parameter details, ensuring you use your contract address from [step 1](test/dummy-academy/src/docs/main/v3/guides/flash-loans.md#1.-setting-up) for the `receiverAddress`.\
 
 2.  #### From a different contract
 
-    Similar to sending a transaction from an EOA as above, ensure the `receiverAddress` is your contract address from [step 1](flash-loans.md#1.-setting-up).\
+    Similar to sending a transaction from an EOA as above, ensure the `receiverAddress` is your contract address from [step 1](test/dummy-academy/src/docs/main/v3/guides/flash-loans.md#1.-setting-up).\
 
 3.  #### From the _same_ contract
 

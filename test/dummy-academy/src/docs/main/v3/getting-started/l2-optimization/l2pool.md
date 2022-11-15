@@ -20,7 +20,7 @@ Since we have a limited set of supported assets that are already given individua
 Supplies asset into the protocol, minting the same amount of corresponding aTokens, and transferring them to `msg.sender`.
 
 {% hint style="info" %}
-You can use data returned from [`encodeSupplyParams`](l2encoder.md#encodesupplyparams) method in L2Encoder helper contract to pass to this method.
+You can use data returned from [`encodeSupplyParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodesupplyparams) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 Call Params
@@ -36,7 +36,7 @@ Call Params
 Supply with transfer approval of supplied asset via permit function. This method removes the need for separate approval tx before supplying asset to the pool.
 
 {% hint style="info" %}
-You can use data returned from [`encodeSupplyWithPermitParams`](l2encoder.md#encodesupplywithpermitparams) method in L2Encoder helper contract to pass to this method.
+You can use data returned from [`encodeSupplyWithPermitParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodesupplywithpermitparams) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -54,7 +54,7 @@ Withdraws `amount` of the underlying `asset`, i.e. redeems the underlying token 
 If user has any existing debt backed by the underlying token, then the max _amount_ available to withdraw is the _amount_ that will not leave user health factor < 1 after withdrawal.
 
 {% hint style="info" %}
-You can use data returned from [`encodeWithdrawParams`](l2encoder.md#encodewithdrawparams) method in L2Encoder helper contract to pass to this method.
+You can use data returned from [`encodeWithdrawParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodewithdrawparams) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                   |
@@ -68,7 +68,7 @@ You can use data returned from [`encodeWithdrawParams`](l2encoder.md#encodewithd
 Borrows `amount` of `asset` with `interestRateMode`, sending the `amount` to `msg.sender`, with the debt being incurred by `onBehalfOf`.
 
 {% hint style="info" %}
-You can use data returned from [`encodeBorrowParams`](l2encoder.md#encodeborrowparams) method in L2Encoder helper contract to pass to this method.
+You can use data returned from [`encodeBorrowParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodeborrowparams) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                                                                                                                                                                                    |
@@ -82,7 +82,7 @@ You can use data returned from [`encodeBorrowParams`](l2encoder.md#encodeborrowp
 Repays debt of an `asset` for the given `rateMode`.
 
 {% hint style="info" %}
-You can use data returned from [`encodeRepayParams`](l2encoder.md#encoderepayparams) method in L2Encoder helper contract to pass to this method.
+You can use data returned from [`encodeRepayParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encoderepayparams) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                                                                                                |
@@ -96,7 +96,7 @@ You can use data returned from [`encodeRepayParams`](l2encoder.md#encoderepaypar
 Repay with transfer approval of borrowed asset via permit function. This method removes the need for separate approval tx before repaying asset to the pool.
 
 {% hint style="info" %}
-You can use data returned from [`encodeRepayWithPermitParams`](l2encoder.md#encoderepaywithpermitparams) method in L2Encoder helper contract to pass to this method.​
+You can use data returned from [`encodeRepayWithPermitParams`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encoderepaywithpermitparams) method in L2Encoder helper contract to pass to this method.​
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -112,7 +112,7 @@ You can use data returned from [`encodeRepayWithPermitParams`](l2encoder.md#enco
 Allows user to repay with _aTokens_ of the underlying debt asset without any approvals eg. Pay DAI debt using aDAI tokens.
 
 {% hint style="info" %}
-You can use data data returned from [encodeRepayWithATokensParams](l2encoder.md#encoderepayparams-1) method in L2Encoder helper contract to pass to this method.
+You can use data data returned from [encodeRepayWithATokensParams](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encoderepayparams-1) method in L2Encoder helper contract to pass to this method.
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                                                                                                                                |
@@ -126,7 +126,7 @@ You can use data data returned from [encodeRepayWithATokensParams](l2encoder.md#
 Swaps `msg.sender`'s borrow rate mode between stable and variable.
 
 {% hint style="info" %}
-You can use data returned from [`encodeSwapBorrowRateMode`](l2encoder.md#encodeswapborrowratemode) method in L2Encoder helper contract to pass to this method.​
+You can use data returned from [`encodeSwapBorrowRateMode`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodeswapborrowratemode) method in L2Encoder helper contract to pass to this method.​
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                |
@@ -140,7 +140,7 @@ You can use data returned from [`encodeSwapBorrowRateMode`](l2encoder.md#encodes
 Rebalances stable borrow rate of the user for given asset. In case of liquidity crunches on the protocol, stable rate borrows might need to be rebalanced to bring back equilibrium between the borrow and supply rates.
 
 {% hint style="info" %}
-You can use data returned from [`encodeRebalanceStableBorrowRate`](l2encoder.md#encoderebalancestableborrowrate) method in L2Encoder helper contract to pass to this method.​
+You can use data returned from [`encodeRebalanceStableBorrowRate`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encoderebalancestableborrowrate) method in L2Encoder helper contract to pass to this method.​
 {% endhint %}
 
 
@@ -156,7 +156,7 @@ You can use data returned from [`encodeRebalanceStableBorrowRate`](l2encoder.md#
 Sets the asset of `msg.sender` to be used as collateral or not.
 
 {% hint style="info" %}
-You can use data returned from [`encodeSetUserUseReserveAsCollateral`](l2encoder.md#encodesetuserusereserveascollateral) method in L2Encoder helper contract to pass to this method.​
+You can use data returned from [`encodeSetUserUseReserveAsCollateral`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#encodesetuserusereserveascollateral) method in L2Encoder helper contract to pass to this method.​
 {% endhint %}
 
 | Name | Type      | Description                                                                                                                                                                           |
@@ -170,7 +170,7 @@ You can use data returned from [`encodeSetUserUseReserveAsCollateral`](l2encoder
 Liquidate positions with a **health factor** below 1.
 
 {% hint style="info" %}
-You can use data returned from [`encodeLiquidationCall`](l2encoder.md#liquidationcall) method in L2Encoder helper contract to pass to this method.​
+You can use data returned from [`encodeLiquidationCall`](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md#liquidationcall) method in L2Encoder helper contract to pass to this method.​
 {% endhint %}
 
 | Name  | Type      | Description                                                                                                                                                                                                                                                              |

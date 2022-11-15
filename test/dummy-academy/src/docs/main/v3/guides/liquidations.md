@@ -1,16 +1,16 @@
 # Liquidations
 
-The health of the Aave Protocol is dependent on the 'health' of the collateralised positions within the protocol, also known as the 'health factor'. When the 'health factor' of an account's total loans is below 1, anyone can make a `liquidationCall()`  to the [`Pool`](../core-contracts/pool.md#liquidationcall) or [L2Pool](../getting-started/l2-optimization/l2pool.md#liquidationcall) (in case of Arbitrum/Optimism) contract, pay back part of the debt owed and receive discounted collateral in return (also known as the liquidation bonus).&#x20;
+The health of the Aave Protocol is dependent on the 'health' of the collateralised positions within the protocol, also known as the 'health factor'. When the 'health factor' of an account's total loans is below 1, anyone can make a `liquidationCall()`  to the [`Pool`](../core-contracts/pool.md#liquidationcall) or [L2Pool](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2pool.md#liquidationcall) (in case of Arbitrum/Optimism) contract, pay back part of the debt owed and receive discounted collateral in return (also known as the liquidation bonus).&#x20;
 
 This incentivises third parties to participate in the health of the overall protocol, by acting in their own interest (to receive the discounted collateral) and as a result, ensure borrows are sufficiently collateralize.
 
 There are multiple ways to participate in liquidations:
 
-1. By calling the liquidationCall() directly in the [Pool](../core-contracts/pool.md#liquidationcall) or [L2Pool](../getting-started/l2-optimization/l2pool.md#liquidationcall) contract.
+1. By calling the liquidationCall() directly in the [Pool](../core-contracts/pool.md#liquidationcall) or [L2Pool](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2pool.md#liquidationcall) contract.
 2. By creating your own automated bot or system to liquidate loans.
 
 {% hint style="warning" %}
-For liquidation calls to be profitable, you must take into account the gas cost involved in liquidating the loan. If a high gas price is used, then the liquidation may be unprofitable for you. See the [Calculating profitability](liquidations.md#calculating-profitability-vs-gas-cost) section for more details.
+For liquidation calls to be profitable, you must take into account the gas cost involved in liquidating the loan. If a high gas price is used, then the liquidation may be unprofitable for you. See the [Calculating profitability](test/dummy-academy/src/docs/main/v3/guides/liquidations.md#calculating-profitability-vs-gas-cost) section for more details.
 {% endhint %}
 
 {% hint style="success" %}

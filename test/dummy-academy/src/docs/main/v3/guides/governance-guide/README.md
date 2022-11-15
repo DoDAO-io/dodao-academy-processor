@@ -11,10 +11,10 @@ With the addition of new features in Aave V3, the scope for potential governance
 
 All proposals follow the same general process from idea to execution, which is detailed in this guide. There are also pages with templates for completing these steps with standard proposal types:
 
-* [🪙 Asset Listing](asset-listing.md)
-* [🎁 Rewards](rewards.md)
-* [🧑‍⚖️ Permissions](permissions.md) 
-* [🔬 Parameter Tuning](parametertuning.md) 
+* [🪙 Asset Listing](test/dummy-academy/src/docs/main/v3/guides/governance-guide/asset-listing.md)
+* [🎁 Rewards](test/dummy-academy/src/docs/main/v3/guides/governance-guide/rewards.md)
+* [🧑‍⚖️ Permissions](test/dummy-academy/src/docs/main/v3/guides/governance-guide/permissions.md) 
+* [🔬 Parameter Tuning](test/dummy-academy/src/docs/main/v3/guides/governance-guide/parametertuning.md) 
 * [🔬 Parameter Tuning](https://github.com/aave/docs-v3/blob/update/guides/governance-guide/parameterTuning.md)
 
 ### General Governance Process

@@ -8,7 +8,7 @@ This enables:
 * The borrowers (aka delegatees) to access an uncollateralized loan.
 
 {% hint style="warning" %}
-Borrow by _delegatee_ must be consistent with _delegator_ [eMode](../whats-new/efficiency-mode-emode.md) category. \
+Borrow by _delegatee_ must be consistent with _delegator_ [eMode](test/dummy-academy/src/docs/main/v3/whats-new/efficiency-mode-emode.md) category. \
 For eg. if a delegator eMode category is `STABLECOINS`, then&#x20;
 
 * delegator can only borrow `STABLECOINS` eMode category asset.&#x20;

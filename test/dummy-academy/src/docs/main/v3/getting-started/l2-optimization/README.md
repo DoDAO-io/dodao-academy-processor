@@ -4,9 +4,9 @@ The main transaction cost on L2 comes from calldata. To minimize this cost, Aave
 
 Below are the contracts introduced for L2 optimization:
 
-* ****[**L2Pool**](l2pool.md): Contract for L2 optimized user facing methods that takes byte encoded input arguments.
+* ****[**L2Pool**](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2pool.md): Contract for L2 optimized user facing methods that takes byte encoded input arguments.
 * **CalldataLogic**: Library contract used to decode the byte32 arguments passed to the L2Pool.
-* ****[**L2Encoder**](l2encoder.md): Helper contract which has view methods to encode data to be passed to L2Pool.
+* ****[**L2Encoder**](test/dummy-academy/src/docs/main/v3/getting-started/l2-optimization/l2encoder.md): Helper contract which has view methods to encode data to be passed to L2Pool.
 
 {% hint style="info" %}
 Pool methods not exposed in L2Pool.sol (such as flashLoan, setUserEMode etc.) are same on L2 as on other versions of protocol. Refer [Pool](../../core-contracts/pool.md) docs for rest of the methods.&#x20;

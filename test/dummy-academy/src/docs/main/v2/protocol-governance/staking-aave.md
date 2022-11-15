@@ -49,21 +49,21 @@ If they still have LEND, then the LEND tokens need to be migrated. See the [LEND
 
 ### 2. Stake the user's AAVE
 
-1. The user must first `approve()` the amount for the [`Staked AAVE contract`](staking-aave.md#deployed-contracts) to stake.
-2. The user should call [`stake()`](staking-aave.md#stake), passing in their address and the amount to stake.
+1. The user must first `approve()` the amount for the [`Staked AAVE contract`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#deployed-contracts) to stake.
+2. The user should call [`stake()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#stake), passing in their address and the amount to stake.
 
 ### 3. Claim staking rewards
 
-After a period of time, the user will accrue rewards. To check the rewards accrued for a certain user, call [`getTotalRewardsBalance()`](staking-aave.md#gettotalrewardsbalance) to fetch the pending rewards. To claim the rewards, call [`claimRewards()`](staking-aave.md#claimrewards).
+After a period of time, the user will accrue rewards. To check the rewards accrued for a certain user, call [`getTotalRewardsBalance()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#gettotalrewardsbalance) to fetch the pending rewards. To claim the rewards, call [`claimRewards()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#claimrewards).
 
 ### 4. Un-staking
 
 To un-stake, a user must first activate the cool down timer, wait for the cool down time to elapse, then redeem their staked tokens.
 
-1. To activate the cool down timer, call [`cooldown()`](staking-aave.md#cooldown).
-2. To check if the cool down timer has finished, the current unix timestamp must be greater than the value returned from [`stakersColldowns()`](staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](staking-aave.md#cooldown\_seconds).
-3. When the cool down has finished, the user will have a maximum [`UNSTAKE_WINDOW()`](staking-aave.md#unstake\_window) of time to redeem their tokens. If they do not redeem before this time period has elapsed, then the cool down timer is reset and they will need to activate the cool down again.
-4. The final step to un-stake it to call [`redeem()`](staking-aave.md#redeem).
+1. To activate the cool down timer, call [`cooldown()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown).
+2. To check if the cool down timer has finished, the current unix timestamp must be greater than the value returned from [`stakersColldowns()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown\_seconds).
+3. When the cool down has finished, the user will have a maximum [`UNSTAKE_WINDOW()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#unstake\_window) of time to redeem their tokens. If they do not redeem before this time period has elapsed, then the cool down timer is reset and they will need to activate the cool down again.
+4. The final step to un-stake it to call [`redeem()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#redeem).
 
 ## Staked AAVE (stkAAVE)
 
@@ -78,7 +78,7 @@ Stakes a certain amount of AAVE tokens, with the option of sending the staked AA
 Note: the `msg.sender` must already have a balance of AAVE token.
 
 {% hint style="danger" %}
-The user must `approve()` the `amount` for the [`Staked AAVE`](staking-aave.md#deployed-contracts) contract to stake, before execution.
+The user must `approve()` the `amount` for the [`Staked AAVE`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#deployed-contracts) contract to stake, before execution.
 {% endhint %}
 
 | Parameter    | Type    | Description                                                                                                                    |
@@ -106,9 +106,9 @@ Redeems the staked tokens - receiving AAVE tokens and burning stkAAVE tokens.
 {% hint style="warning" %}
 A user can only redeem the underlying AAVE tokens if the following has been satisfied:
 
-1. Activated their [`cooldown()`](staking-aave.md#cooldown) period, and
-2. The sum of [`stakersCooldowns()`](staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](staking-aave.md#cooldown\_seconds) for their address must be less than the current unix block timestamp, and
-3. They must call `redeem()` before the sum of [`stakersCooldowns()`](staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](staking-aave.md#cooldown\_seconds) +[`UNSTAKE_WINDOW()`](staking-aave.md#unstake\_window) has passed.
+1. Activated their [`cooldown()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown) period, and
+2. The sum of [`stakersCooldowns()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown\_seconds) for their address must be less than the current unix block timestamp, and
+3. They must call `redeem()` before the sum of [`stakersCooldowns()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#stakerscooldowns) + [`COOLDOWN_SECONDS()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown\_seconds) +[`UNSTAKE_WINDOW()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#unstake\_window) has passed.
 {% endhint %}
 
 
@@ -124,15 +124,15 @@ A user can only redeem the underlying AAVE tokens if the following has been sati
 
 Activates the cool down timer to be able to unstake.
 
-See [`getNextCooldownTimestamp()` ](staking-aave.md#getnextcooldowntimestamp)for example cool down periods and scenarios.
+See [`getNextCooldownTimestamp()` ](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#getnextcooldowntimestamp)for example cool down periods and scenarios.
 
 ### stakersCooldowns()
 
 **`function stakersCooldowns(address staker) view returns uint`** - [code](https://github.com/aave/safety-module/blob/3c8d5c30302c35239b6ea8c23ad3df36b485d7b6/contracts/stake/StakedToken.sol#L35)
 
-Returns the unix timestamp in seconds for when the `staker` activated the cool down by calling [`cooldown()`](staking-aave.md#cooldown).
+Returns the unix timestamp in seconds for when the `staker` activated the cool down by calling [`cooldown()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown).
 
-A staker is able to successfully unstake when this value + [`COOLDOWN_SECONDS`](staking-aave.md#cooldown\_seconds) in unix time has passed.
+A staker is able to successfully unstake when this value + [`COOLDOWN_SECONDS`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown\_seconds) in unix time has passed.
 
 ### COOLDOWN\_SECONDS()
 
@@ -146,7 +146,7 @@ As of October 2020, the current `COOLDOWN_SECONDS` value is 864000 seconds (i.e.
 
 **`function UNSTAKE_WINDOW() view returns uint`** - [code](https://github.com/aave/safety-module/blob/3c8d5c30302c35239b6ea8c23ad3df36b485d7b6/contracts/stake/StakedToken.sol#L29)
 
-Returns the maximum window of time in seconds that a staker can [`redeem()`](staking-aave.md#redeem) their stake once a [`cooldown()`](staking-aave.md#cooldown) period has been completed.
+Returns the maximum window of time in seconds that a staker can [`redeem()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#redeem) their stake once a [`cooldown()`](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#cooldown) period has been completed.
 
 As of October 2020, the current `UNSTAKE_WINDOW` value is 172800 seconds (i.e. 2 days). This value should always be checked directly from the contracts.
 
@@ -193,6 +193,6 @@ Returns the total rewards that are pending to be claimed by a staker.
 To calculate the APR (as shown in the client UI), simply use:\
 `emissionsPerSecond` x `seconds in a year` / `current stakes`
 
-To get the `emissionsPerSecond`, go to the[ stkAAVE contract](staking-aave.md#deployed-contracts) and under `assets()` input the stkAave address.
+To get the `emissionsPerSecond`, go to the[ stkAAVE contract](test/dummy-academy/src/docs/main/v2/protocol-governance/staking-aave.md#deployed-contracts) and under `assets()` input the stkAave address.
 
 To get `current stakes`, fetch the `balanceOf()` the stkAAVE contract for the AAVE token.

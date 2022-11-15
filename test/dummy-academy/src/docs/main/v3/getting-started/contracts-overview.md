@@ -82,7 +82,7 @@ Peripheral contract to collect and pre-process information from the Pool.
 
 ### Rewards
 
-#### [RewardsController](contracts-overview.md#rewardscontroller)
+#### [RewardsController](test/dummy-academy/src/docs/main/v3/getting-started/contracts-overview.md#rewardscontroller)
 
 This contract is responsible for configuring the different rewards and the claim process.
 
@@ -92,18 +92,18 @@ These are isolated contracts that manages the procedure of the rewards transfer 
 
 ### Misc
 
-#### [UiIncentiveDataProviderV3](contracts-overview.md#uiincentivedataproviderv3)
+#### [UiIncentiveDataProviderV3](test/dummy-academy/src/docs/main/v3/getting-started/contracts-overview.md#uiincentivedataproviderv3)
 
 Helper contract to fetch Incentives Data. It is used by Aave UI for reward balance info.
 
-#### [UiPoolDataProviderV3](contracts-overview.md#uipooldataproviderv3)
+#### [UiPoolDataProviderV3](test/dummy-academy/src/docs/main/v3/getting-started/contracts-overview.md#uipooldataproviderv3)
 
 Helper contract, used by Aave UI, to fetch Pool Data such reserves list, all reserves data like liquidity, token addresses, rate strategy etc.
 
-#### [WETHGateway](contracts-overview.md#wethgateway)
+#### [WETHGateway](test/dummy-academy/src/docs/main/v3/getting-started/contracts-overview.md#wethgateway)
 
 Only ERC20 tokens can be supplied & borrowed from the Aave Protocol V3 pools. To facilitate using token native to the chain (such ETH on Ethereum or Matic on polygon) a helper contract is used to support single tx supply, borrow, repay and withdraw.
 
-#### [WalletBalanceProvider](contracts-overview.md#walletbalanceprovider)
+#### [WalletBalanceProvider](test/dummy-academy/src/docs/main/v3/getting-started/contracts-overview.md#walletbalanceprovider)
 
 Used for getting multiple tokens balance for one user address. This contract is used by Aave backend to reduce the number of blockchain calls for fetching user balance.

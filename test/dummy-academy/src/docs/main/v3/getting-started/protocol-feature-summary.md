@@ -4,15 +4,15 @@ The Aave Protocol offers features which may only be available in select networks
 
 ## Page Contents
 
-* [Network Feature Summary](protocol-feature-summary.md#network-feature-summary)
-  * [AAVE Staking](protocol-feature-summary.md#staking)
-  * [AAVE Governance](protocol-feature-summary.md#on-chain-governance)
-  * [Snapshot Voting](protocol-feature-summary.md#snapshot-voting)
-  * [Cross-Chain Governance Bridges](protocol-feature-summary.md#cross-chain-governance-bridges)
-* [Market Feature Summary](protocol-feature-summary.md#market-feature-summary)
-  * [Repay With Collateral](protocol-feature-summary.md#repay-with-collateral)
-  * [Collateral Swap](protocol-feature-summary.md#collateral-swap)
-  * [Repay with aTokens](protocol-feature-summary.md#repay-with-atokens)
+* [Network Feature Summary](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#network-feature-summary)
+  * [AAVE Staking](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#staking)
+  * [AAVE Governance](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#on-chain-governance)
+  * [Snapshot Voting](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#snapshot-voting)
+  * [Cross-Chain Governance Bridges](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#cross-chain-governance-bridges)
+* [Market Feature Summary](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#market-feature-summary)
+  * [Repay With Collateral](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#repay-with-collateral)
+  * [Collateral Swap](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#collateral-swap)
+  * [Repay with aTokens](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#repay-with-atokens)
 
 ## Network Feature Summary
 
@@ -81,7 +81,7 @@ The _collateral swap_ feature is available on following **mainnet** markets:
 
 ## Repay With ATokens
 
-_Repay with ATokens_ is a new Aave protocol V3 native feature, which allows the user to repay borrowed assets with supplied liquidity of the same asset type in the pool (e.g., repay borrowed _USDC_ with _aUSDC)_. Additional details can be located at [New Feature: repay with atoken](../whats-new/repay-with-atokens.md).
+_Repay with ATokens_ is a new Aave protocol V3 native feature, which allows the user to repay borrowed assets with supplied liquidity of the same asset type in the pool (e.g., repay borrowed _USDC_ with _aUSDC)_. Additional details can be located at [New Feature: repay with atoken](test/dummy-academy/src/docs/main/v3/whats-new/repay-with-atokens.md).
 
 ### Supported Markets
 
@@ -112,7 +112,7 @@ The staking option is only available on Ethereum Mainnet. Learn more about staki
 Existing feature from Aave governance V2.
 {% endhint %}
 
-The [Aave Snapshot Space](https://snapshot.org/#/aave.eth) is a designated place for voters to gauge the community sentiment for on-chain votes and decide off-chain proposals. Voting on Snapshot proposals is done via a gasless signature and is compatible with a variety of assets and chains. A list of available voting strategies can be viewed [here](protocol-feature-summary.md#network-feature-summary) or queried in realtime via this [GraphQL endpoint](https://hub.snapshot.org/graphql?query=%0Aquery%20Spaces%20%7B%0A%20%20spaces\(%0A%20%20%20%20first%3A%2020%2C%0A%20%20%20%20skip%3A%200%2C%0A%20%20%20%20orderBy%3A%20%22created%22%2C%0A%20%20%20%20orderDirection%3A%20desc%2C%0A%20%20%20%20where%3A%20%7Bid%3A%20%22aave.eth%22%7D%0A%20%20\)%20%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20about%0A%20%20%20%20network%0A%20%20%20%20symbol%0A%20%20%20%20strategies%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20network%0A%20%20%20%20%20%20params%0A%20%20%20%20%7D%0A%20%20%20%20admins%0A%20%20%20%20members%0A%20%20%20%20filters%20%7B%0A%20%20%20%20%20%20minScore%0A%20%20%20%20%20%20onlyMembers%0A%20%20%20%20%7D%0A%20%20%20%20plugins%0A%20%20%7D%0A%7D).
+The [Aave Snapshot Space](https://snapshot.org/#/aave.eth) is a designated place for voters to gauge the community sentiment for on-chain votes and decide off-chain proposals. Voting on Snapshot proposals is done via a gasless signature and is compatible with a variety of assets and chains. A list of available voting strategies can be viewed [here](test/dummy-academy/src/docs/main/v3/getting-started/protocol-feature-summary.md#network-feature-summary) or queried in realtime via this [GraphQL endpoint](https://hub.snapshot.org/graphql?query=%0Aquery%20Spaces%20%7B%0A%20%20spaces\(%0A%20%20%20%20first%3A%2020%2C%0A%20%20%20%20skip%3A%200%2C%0A%20%20%20%20orderBy%3A%20%22created%22%2C%0A%20%20%20%20orderDirection%3A%20desc%2C%0A%20%20%20%20where%3A%20%7Bid%3A%20%22aave.eth%22%7D%0A%20%20\)%20%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20about%0A%20%20%20%20network%0A%20%20%20%20symbol%0A%20%20%20%20strategies%20%7B%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20network%0A%20%20%20%20%20%20params%0A%20%20%20%20%7D%0A%20%20%20%20admins%0A%20%20%20%20members%0A%20%20%20%20filters%20%7B%0A%20%20%20%20%20%20minScore%0A%20%20%20%20%20%20onlyMembers%0A%20%20%20%20%7D%0A%20%20%20%20plugins%0A%20%20%7D%0A%7D).
 
 ## On-Chain Governance
 

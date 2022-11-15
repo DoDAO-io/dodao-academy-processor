@@ -1,4 +1,9 @@
-enableGuides: true
-enableCourses: false
-enableTimeline: true
-enableBytes: true
+bytes:
+  - name: Main
+    folder: main
+guides:
+  - name: Main
+    folder: main
+docs:
+  - name: Main
+    folder: main
