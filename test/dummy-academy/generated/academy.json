@@ -17,11 +17,29 @@
       "key": "main"
     }
   ],
+  "courses": [
+    {
+      "name": "Courses",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
+      "content": "Shows the important events and updates happening on the project",
+      "folder": "main",
+      "key": "main"
+    }
+  ],
   "docs": [
     {
       "name": "Docs",
       "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
       "content": "Similar to a book and covers each and every detail",
+      "folder": "main",
+      "key": "main"
+    }
+  ],
+  "simulations": [
+    {
+      "name": "Simulations",
+      "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
+      "content": "Shows the important events and updates happening on the project",
       "folder": "main",
       "key": "main"
     }

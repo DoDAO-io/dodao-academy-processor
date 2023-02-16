@@ -18,22 +18,16 @@ function generateGuidesTable(guidesSrcDir: string, guidesToGenerate: string[]) {
     .join('\n ');
 }
 
-function generateGuides(header: string, footer: string, guidesSrcDir: string, guidesOutDir: string, guidesToGenerate: string[]) {
-  guidesToGenerate.forEach(guide => generateGuide(header, footer, guidesSrcDir, guidesOutDir, guide));
+function generateGuides(guidesSrcDir: string, guidesOutDir: string, guidesToGenerate: string[]) {
+  guidesToGenerate.forEach(guide => generateGuide(guidesSrcDir, guidesOutDir, guide));
 
   // prettier-ignore
   const courseReadmeContents =
-    dedent`${header}
----
-
-## Guides
+    dedent`## Guides
 
 | S.No        | Title       |  Details  |  Link  |
 | ----------- | ----------- |----------- | ----------- |
 ${(generateGuidesTable(guidesSrcDir, guidesToGenerate))}
-
----
-${footer} 
 `;
 
   console.log('Generate Guides README.md');
@@ -54,13 +48,11 @@ function createDirectories(guidesOutDir: string) {
 
 export function generateGuideFiles(guidesSrcDir: string, guidesOutDir: string) {
   const guidesFile = fs.readFileSync(`${guidesSrcDir}/guides.yaml`, 'utf8');
-  const header = fs.readFileSync(`${guidesSrcDir}/guides-header.md`, 'utf8');
-  const footer = fs.readFileSync(`${guidesSrcDir}/guides-footer.md`, 'utf8');
 
   createDirectories(guidesOutDir);
 
   const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
-  generateGuides(header, footer, guidesSrcDir, guidesOutDir, guidesToGenerate);
+  generateGuides(guidesSrcDir, guidesOutDir, guidesToGenerate);
 
   writeFileSync(
     `${guidesOutDir}/json/guides.json`,

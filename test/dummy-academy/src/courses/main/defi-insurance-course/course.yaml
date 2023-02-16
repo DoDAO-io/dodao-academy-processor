@@ -1,0 +1,98 @@
+title: Insurance in DeFi
+key: insurance-in-defi
+summary: >
+  This is an introductory course for anyone trying to understand how Inusrance
+  works in DeFi
+highlights:
+  - Insurance in DeFi
+  - NexusMutual
+  - BridgeMutual
+  - Unslashed
+  - Sherlock
+publishStatus: Live
+thumbnail: >-
+  https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/insurance_course.png
+details: >-
+  In this course we first give some introduction to Insurance in DeFi and then
+  we  discuss how Insurance works in various protocols
+
+  1) Chapter 1 - Insurance in DeFi
+
+  2) Chapter 2 - NexusMutual
+
+  3) Chapter 3 - Sherlock
+
+  4) Chapter 3 - Ease
+duration: 30 mins - 1 hour
+topics:
+  - key: intoduction
+    title: Intoduction
+    details: >+
+      Insurance in decentralized finance (DeFi) works in much the same way as
+      traditional insurance, with a few key differences. In traditional
+      insurance, a policyholder pays premiums to an insurance company, which
+      provides financial protection in the event of a loss or other covered
+      event. In DeFi, insurance is typically provided by a smart contract on a
+      blockchain, rather than by a traditional insurance company.
+
+      Here are some key points to consider when thinking about insurance in
+      DeFi:
+
+      * Risk pooling: DeFi insurance typically works by pooling the premiums
+      paid by policyholders into a shared fund. This fund is used to pay out
+      claims in the event of a loss or covered event.
+
+      * Smart contracts: DeFi insurance is typically provided through smart
+      contracts on a blockchain. These smart contracts automate the process of
+      calculating premiums, paying out claims, and managing the risk pool.
+
+      * Transparency: Because DeFi insurance is provided through smart contracts
+      on a blockchain, the terms of the insurance policy and the status of the
+      risk pool are typically transparent and verifiable. This can give
+      policyholders more confidence in the fairness and reliability of the
+      insurance process.
+
+      * Customization: DeFi insurance can be customized to meet the specific
+      needs of policyholders. For example, a policyholder might be able to
+      choose the specific risks they want to be covered for, or select a premium
+      payment schedule that meets their needs.
+
+      * Overall, DeFi insurance is a promising new application of blockchain
+      technology that has the potential to make insurance more transparent,
+      efficient, and accessible.
+
+    explanations: intoduction.yaml
+  - title: Nexus Mutual
+    key: nexus-mutual
+    details: |
+      Later
+    explanations: nexus_mutual.yaml
+    questions: nexus_mutual.yaml
+    status: Done
+    completionWeek: Done
+  - title: Sherlock
+    key: sherlock
+    details: >-
+      Sherlock is an audit marketplace and smart contract coverage protocol
+      built on the Ethereum blockchain. Sherlock works to protect Decentralized
+      Finance (DeFi) users from smart contract exploits with security reviews
+      from top auditors backed by smart contract coverage on the audited
+      contracts.
+    explanations: sherlock.yaml
+    questions: sherlock.yaml
+    status: Done
+    completionWeek: Done
+  - title: Ease
+    key: ease
+    details: |
+      Later
+    explanations: ease.yaml
+    questions: ease.yaml
+    status: Done
+    completionWeek: Done
+courseAdmins:
+  - '0x34d014758297c00fea49935fce172677904d51ef'
+coursePassContent: Pass content of Course !!!!!!!!!!
+topicConfig:
+  showExplanations: true
+  showHints: true

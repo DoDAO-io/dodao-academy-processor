@@ -12,10 +12,9 @@ export enum GuidePublishStatus {
 }
 
 export interface GitByteModel {
-  categories: string[];
   content: string;
   created: string;
-  key: string;
+  id: string;
   name: string;
   publishStatus: GuidePublishStatus;
   steps: GitByteStep[];

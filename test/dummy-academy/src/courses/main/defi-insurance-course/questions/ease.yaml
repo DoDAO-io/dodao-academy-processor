@@ -1,0 +1,203 @@
+- uuid: 152d3924-1a69-4254-a6f4-65c2fc27ea78
+  type: SingleChoice
+  content: What is the name of the approach used in Ease protocol to protect users against risks?
+  hint: NoHint
+  explanation: The RCA is a way for users/subscribers to protect themselves against risk. It operates like an reciprocal insurance exchange, in which users essentially cover each other.
+  answerKeys:
+    - A
+  difficultyLevel: "Low"
+  choices:
+    - content: RCA
+      key: A
+    - content: Traditional coverage
+      key: B
+    - content: Risk-based pricing
+      key: C
+    - content: Premiums
+      key: D
+
+- uuid: c405a256-25de-4725-b3d0-99c013c79889
+  type: SingleChoice
+  content: Does RCA require premiums to be paid in advance?
+  hint: NoHint
+  explanation: RCA doesn't require any premiums users are only charged at the event of hacks usually known as "covered events".
+  answerKeys:
+    - B
+  difficultyLevel: "Medium"
+  choices:
+    - content: "Yes"
+      key: A
+    - content: "No"
+      key: B
+
+- uuid: 161cc6a3-fe95-4711-88d4-4a1bde3255b5
+  type: SingleChoice
+  content: What are the advantages of using Ease protocol compared to traditional insurance methods?
+  hint: NoHint
+  explanation: |
+    Ease protocol is more cost effective compared to the traditional insurance as the user's assets will act as a collateral. 
+    Users are charged only at the events of hack. No proof of loss is required to cover the assets as the claims can be easily verified.
+  answerKeys:
+    - D
+  difficultyLevel: "Medium"
+  choices:
+    - content: It is more efficient and cost-effective
+      key: A
+    - content: It eliminates unnecessary premiums
+      key: B
+    - content: No proof of loss is required for coverage
+      key: C
+    - content: All of the above
+      key: D
+- uuid: 56fbe5a0-3522-4654-a0ef-71f183da5564
+  type: SingleChoice
+  content: Who decides to liquidate assets for each vault in Ease protocol?
+  hint: NoHint
+  explanation: The DAO will decide to liquidate the assets to cover the affected vaults.
+  answerKeys:
+    - C
+  difficultyLevel: "Medium"
+  choices:
+    - content: The admin
+      key: A
+    - content: The user
+      key: B
+    - content: The DAO
+      key: C
+    - content: The underwriter
+      key: D
+- uuid: 0a7802d8-7aed-4956-83ec-613a78a55ce2
+  type: SingleChoice
+  content: How is the amount to be liquidated from each vault determined in Ease protocol?
+  hint: NoHint
+  explanation: The loss amount in each vault to be calculated depends on the safety ranking, maximum fee and total loss from the hack.
+  answerKeys:
+    - D
+  difficultyLevel: "Low"
+  choices:
+    - content: Based on the maximum fee
+      key: A
+    - content: Based on the safety ranking
+      key: B
+    - content: Based on the total loss from the hack
+      key: C
+    - content: All of the above
+      key: D
+- uuid: 0e82aee3-005d-4300-8106-2d5f0ca3c900
+  type: SingleChoice
+  content: What is the proof of deposition in Ease protocol?
+  hint: NoHint
+  explanation: The user's will recieve ez-tokens after depositing in the vault as a proof of deposition.
+  answerKeys:
+    - B
+  difficultyLevel: "High"
+  choices:
+    - content: Users will recieve $gvEASE after depositing the assets
+      key: A
+    - content: Users will recieve ez-tokens after depositing the assets
+      key: B
+    - content: A special certificate which is issued at the time of deposition
+      key: C
+    - content: A NFT is provided for each depositor
+      key: D
+- uuid: f1034ba32-de8a-41f8-9dc0-156d899dba8e
+  type: SingleChoice
+  content: What is the format in which claim payouts will be distributed in Ease DeFi Uninsurance system?
+  hint: NoHint
+  explanation: Claim payouts will be distributed in the form of Ether or other fiat-denominated stablecoins to the affected vaults.
+  answerKeys:
+    - D
+  difficultyLevel: "Medium"
+  choices:
+    - content: Ether
+      key: A
+    - content: Stablecoin
+      key: B
+    - content: $EASE token
+      key: C
+    - content: Both A and B
+      key: D
+- uuid: c4932eef-a279-45df-b40b-f33163108080
+  type: SingleChoice
+  content: Is it necessary for claimants to provide proof of loss in order to receive coverage?
+  hint: NoHint
+  explanation: There is no need for claimants to provide proof of loss in order to receive coverage.
+  answerKeys:
+    - B
+  difficultyLevel: "High"
+  choices:
+    - content: "Yes"
+      key: A
+    - content: "No"
+      key: B
+   
+- uuid: 06c52fc6-0cb1-4f59-8c54-f42932934c11
+  type: SingleChoice
+  content: What will happen if the staked $EASE tokens are withrawn?
+  hint: NoHint
+  explanation: The compounded $gvEASE tokens will be lost and cannot be recovered.
+  answerKeys:
+    - B
+  difficultyLevel: "Medium"
+  choices:
+    - content: The $gvEASE tokens will start growing in time
+      key: A
+    - content: $gvEASE tokens will be lost
+      key: B
+    - content: $Armor tokens starts to grow in time
+      key: C
+    - content: None of the above
+      key: D
+- uuid: 8dd63fa5-5a8b-4d47-89af-dac0f795cf53
+  type: SingleChoice
+  content: What is the ratio of Armour tokens that can be swapped for $EASE token?
+  hint: NoHint
+  explanation: Since Ease is the upgraded version or next version of ArmourFi, the supply of $EASE and $Armor stays the same. The Armour tokens can be swapped for ease in 1:1 ratio.
+  answerKeys:
+    - C
+  difficultyLevel: "Medium"
+  choices:
+    - content: "2:1"
+      key: A
+    - content: "3:1"
+      key: B
+    - content: "1:1"
+      key: C
+    - content: "4:1"
+      key: D
+
+- uuid: ecf52e22-73e4-4945-aaed-a752c32a1598
+  type: SingleChoice
+  content: How many maximum new $EASE tokens can be minted after a DAO vote?
+  hint: NoHint
+  explanation: The maximum of 250 million $EASE tokens can be minted after a DAO vote in order to maintain the max supply of 1 billion.
+  answerKeys:
+    - A
+  difficultyLevel: "Medium"
+  choices:
+    - content: 250 million
+      key: A
+    - content: 100 million
+      key: B
+    - content: 500 million
+      key: C
+    - content: 50 million
+      key: D
+
+- uuid: b34ed286-010a-44d4-becd-203f0ea3f8c2
+  type: SingleChoice
+  content: In what event is coverage not provided in Ease DeFi Uninsurance system?
+  hint: NoHint
+  explanation: The covereage is not provided if the user lost ez-tokens or lost control of the wallet containing ez-tokens.
+  answerKeys:
+    - D
+  difficultyLevel: "Medium"
+  choices:
+    - content: Economic design failure
+      key: A
+    - content: Deliberate governance attack
+      key: B
+    - content: Privileged authority acting in bad faith
+      key: C
+    - content: If the user lost ez-tokens or lost control of the wallet containing ez-tokens
+      key: D

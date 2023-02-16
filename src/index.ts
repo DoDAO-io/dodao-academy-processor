@@ -7,7 +7,9 @@ import { validateBytes } from './bytes/validation/validateByte';
 import { generateDocs } from './docs/generators/generateDocs';
 import { validateDocs } from './docs/validation/validateDocs';
 import { generateGuideFiles } from './guides/generators/generateGuideFiles';
+import { generateSimulationFiles } from './simulations/generators/generateSimulationFiles';
 import { validateGuides } from './guides/validation/validateGuide';
+import { validateSimulations } from './simulations/validation/validateSimulation';
 import { generateTimelineFiles } from './timelines/generators/generateTimelineFiles';
 import { validateTimelines } from './timelines/validation/validateTimelines';
 import { writeFileSync } from './utils/writeFileSync';
@@ -25,6 +27,7 @@ export interface AcademyModel {
   guides: AcademyContentModel[];
   bytes: AcademyContentModel[];
   docs: AcademyContentModel[];
+  simulations: AcademyContentModel[];
   timelines: AcademyContentModel[];
 }
 export function validateAndGenerateFiles(srcPath: string) {
@@ -46,6 +49,11 @@ export function validateAndGenerateFiles(srcPath: string) {
   for (const docElement of academyModel.docs) {
     console.log('\nValidating Docs :', docElement.key);
     validateDocs(`${srcDirPath}/docs/${docElement.folder}`);
+  }
+
+  for (const simulation of academyModel.simulations) {
+    console.log('\nValidating Simulations :', simulation.key);
+    validateSimulations(`${srcDirPath}/simulations/${simulation.folder}`);
   }
 
   for (const timeline of academyModel.timelines) {
@@ -71,6 +79,11 @@ export function validateAndGenerateFiles(srcPath: string) {
   for (const timeline of academyModel.timelines) {
     console.log('\nGenerating Timelines');
     generateTimelineFiles(`${srcDirPath}/timelines/${timeline.folder}`, `${srcDirPath}/../generated/timelines/${timeline.folder}`);
+  }
+
+  for (const simulation of academyModel.simulations) {
+    console.log('\nGenerating Simulations');
+    generateSimulationFiles(`${srcDirPath}/simulations/${simulation.folder}`, `${srcDirPath}/../generated/simulations/${simulation.folder}`);
   }
 
   writeFileSync(`${srcDirPath}/../generated/academy.json`, JSON.stringify(academyModel, null, 2));

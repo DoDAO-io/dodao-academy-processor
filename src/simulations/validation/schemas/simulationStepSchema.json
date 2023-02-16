@@ -1,0 +1,27 @@
+{
+  "id": "/SimulationStepSchema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "content": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "iframeUrl": {
+        "type": "string"
+      },
+      "uuid": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "uuid"
+    ],
+    "additionalProperties": false
+  }
+}

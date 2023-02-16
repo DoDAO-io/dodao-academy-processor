@@ -45,15 +45,12 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateGuide(header: string, footer: string, guidesSrcDir: string, guidesOutDir: string, guideToGenerate: string) {
+export function generateGuide(guidesSrcDir: string, guidesOutDir: string, guideToGenerate: string) {
   console.log(`Generate Guide Files for ${guidesSrcDir}/${guideToGenerate}`);
   const file = fs.readFileSync(`${guidesSrcDir}/${guideToGenerate}`, 'utf8');
   const guideJson = YAML.parse(file) as GitGuideModel;
 
-  const courseReadmeContents = dedent`${header}
----
-
-## ${guideJson.name}
+  const courseReadmeContents = dedent`## ${guideJson.name}
 
 ${guideJson.steps
   .map(step => {
@@ -68,9 +65,6 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
 `;
   })
   .join('\n\n---')}
-
----
-${footer}    
    
 `;
 

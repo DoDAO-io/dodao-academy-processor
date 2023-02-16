@@ -1,0 +1,190 @@
+- key: intro-to-covers
+  title: Introduction
+  shortTitle: Intro
+  details: >
+    ## Intro to Nexus Mutual
+
+    Nexus Mutual is a decentralized insurance platform that uses blockchain
+    technology to create a risk-sharing pool in the form of a mutual. The
+    platform is built on the Ethereum public chain and allows anyone to become a
+    member and purchase cover. It replaces the idea of a traditional insurance
+    company because it is wholly owned by the members. The model encourages
+    engagement as members will get economic incentives for participating in risk
+    assessment, claims assessment, and governance.
+
+
+    ## Membership Requirements
+
+    Becoming a member of the NXM mutual gives you ownership rights to the assets
+    of the company, and a one-time membership fee of 0.0020 ETH. In order to
+    become a member, you will need to verify your identity using our
+    Know-Your-Customer (KYC) process. The NXM token represents membership rights
+    in the mutual, with all members owning the company together in proportion to
+    their individual NXM holdings.
+
+    ## Raising the Capital
+
+    A bonding curve is a mathematical notion that platforms and applications can include to evaluate a token's value based on its supply. Investors will trade collateral in fiat currencies of other cryptocurrencies, such as Bitcoin (BTC) and Ethereum, for tokens at the price mentioned on the bonding curve (ETH). Investors purchase tokens (where they are created) and sell tokens to determine the token's estimated worth according to the bonding curve (where they are burned). The supply of these bonding curve tokens fluctuates as they are created and destroyed, and this has an impact on the value that the bonding curve lists.
+
+
+    Nexus Mutual uses a Continuous Token Model, where the price of the token is determined by a formula and is based on how financially the mutual is performing (ratio between total asset value in the pool and the Minimal Capital Requirement). The MCR is the amount of money necessary to be certain that all claims will be paid. MCR will have a minimum value that is fixed and will be established before launch. It plays a significant role in the token model, affecting the price and the terms of redemption. When the amount of money that the mutual holds (referred to as the "Capital Pool") is more than the MCR, it is said to have sufficient funds. The price of a token is directly affected by the MCR%, or the ratio of money retained to funds required.
+
+- key: risk-assessment
+  title: Risk Assessment 
+  shortTitle: risk analysis  
+  details: >
+
+    Risk assessors are essential to Nexus Mutual. Members with expertise in auditing smart contracts can join the mutual by taking on the role of risk assessor and staking value against particular protocols and/or custodians they believe to be well-coded and safe. As cover is purchased on the protocol, custodian, or cover product (i.e. Yield Token Cover), which the Risk Assessor is staked against, the Risk Assessor is rewarded monetarily by receiving a share of cover premiums in the form of more NXM tokens. By staking NXM against protocols and/or custodians that other members have already staked against, Risk Assessors can also "follow" other Members they believe are knowledgeable at evaluating custodial security and protocol security.
+
+
+    Nexus Mutual is able to offer a variety of cover products with open capacity because other members staked capital in the form of NXM to support the cover policies that are provided to members who want to protect their deployed assets in DeFi and CeFi. The value of any protocol, custodian, or cover product may be staked by members. The Nexus Mutual application's "Risk Assessment" interface enables Members to stake any NXM tokens that are available against a certain protocol, custodian, or insurance product. The stake is then locked and has a 30-day withdrawal window before it may be released.
+
+- title: Buying a cover and Filling claim 
+  shortTitle: cover and claim
+  key: buying-cover-filling-claim
+  details: >
+
+    To purchase Smart Contract Cover you must-
+
+
+    1. Specify the smart contract address for which you would like coverage
+    2. Specify the amount, time period, and currency (ETH or DAI) for your coverage 
+    3. Generate a quote
+    4. Purchase coverage by authorizing a transaction via your Metamask wallet and pay with NXM, ETH, or DAI
+    5. Pay a new member fee of 0.002 ETH and undergo a Know-Your-Customer (KYC) and Anti-Money Laundering (AML) screening
+
+
+    Members of Nexus Mutual referred to as Risk Assessors, who frequently have experience in smart contract audits, set the cost of insurance. The amount of coverage sought, the duration, and the quantity of NXM staked by Risk Assessors are all factors that go into calculating the final cost of the coverage. Then, a portion of the fee paid by the entity requesting coverage is awarded to the risk assessors. As long as there is enough NXM staked to meet claim liabilities, Nexus Mutual can provide coverage for all Ethereum smart contract addresses.
+
+
+    If the buyer experiences a qualified loss of funds, then they can submit a claim which will go through the mutual's Claims Assessment process. Reviewing, debating, and voting on claims is possible for members who stake NXM and elect to serve as claims assessors. Members who serve as Claims Assessors are encouraged to behave honestly, and members are discouraged from casting fictitious votes. The Advisory Board has the authority to burn the malevolent Claims Assessor's staked NXM if it is found that a member made a dishonest vote during the claims procedure. Nexus Mutual takes the evaluation of claims seriously.
+
+
+    When buyer wants to file a claim, they should check  policy's cover wording to make sure the loss is eligible for a reimbursement. 10% of the NXM tokens that make up buyer’s premium are locked and set aside for filing claims when they buy a cover policy.
+
+
+    For each claim filed, 50% of the reserved NXM for filing a claim is staked during the Claims Assessment process.
+    
+    1. If the buyer's claim is approved by Claims Assessors, they will receive a payout and the premium in staked NXM will be returned.
+    2. If the buyer's claim is denied by Claims Assessors, they will not receive a payout and the premium in staked NXM will be burned.
+
+    Every member of the mutual can only apply twice for claim of each cover policy they own.
+
+- title: Claim Assesment
+  shortTitle: claims
+  key: claims
+  details: >
+
+    Members who stake NXM act as claim assessors and decide whether to approve a
+    claim. The claims are processed within 72 hours. For a claim that needs
+    approval, the loss of funds must-
+
+
+    1. Fall into various categories which are mentioned in the cover policy
+    contract
+
+    2. Occur within the defined time period
+
+    3. Be significant enough to account for as a claim
+
+
+    The claimant must additionally provide evidence of their loss or that they
+    were unable to withdraw money. This might be a 0-value transaction or a
+    signature. An account statement, a notification from the protocol describing
+    a hack, or another sort of warning could serve as additional proof.
+
+    If a claim is allowed after a decision has been made, the deposit will be returned and the Cover Amount will be paid to the Cover Holder's address. If the liquidity pool is depleted, a second effort at claim payment is made 24 hours later. The claim is not resubmitted after the initial 60 days because it is expected that there would never be enough money. If the claim is rejected, the insurance policy is still in effect, and the cover deposit that was used to file the claim is destroyed.
+
+- title: Penalize
+  shortTitle: Penalize
+  key: penalize
+  details: >
+
+    Incentives between members who submit claims and members who function as claim assessors must be in line for this to succeed. This is accomplished using a system of financial rewards and penalties. There is a substantial motivation for members who vote on claims to cast accurate votes. Members who vote on claims are nevertheless discouraged from casting false ballots. To accomplish this, awards in NXM are given to those who support the consensus decision, staked NXM is locked up for a longer amount of time for those who do not, and in the event that fraudulent voting occurs, NXM staked by a Claims Assessor may be burned.
+    
+- title: Types of Covers
+  shortTitle: Covers
+  key: covers
+  details: >
+    Nexus Mutual consists of three types of covers-
+
+
+    1. Protocol Covers 
+
+    2. Custody Cover 
+
+    3. Yield Token Cover
+
+
+    Cover is only ever applicable to specific types of events and is always
+    protocol- or token-specific. A protocol cover policy, for instance, won't
+    safeguard money held on a custodial platform. Cover is used as an
+    alternative to “insurance” in traditional finance.
+
+
+    ### Protocol Covers
+
+    Protocol covers are generally to protect and safeguards assets in the event
+    of a protocol, smart contract failure, or oracle misuse. They are necessary
+    because smart contacts can be hacked due to flaws in them. Primarily it
+    includes-
+
+
+    1. Economic design failure 
+
+    2. Governance attacks
+
+    3. Severe oracle failure 
+
+    4. Protection for Non-Ethereum smart contracts
+
+    5. Protection for assets on Layer-2
+
+
+    ### Custody Covers
+
+    In the case of an attack on a custodial platform—one that seizes custody of
+    user cash when they engage with it—this kind of insurance protects that
+    money. Cover the dangers of money being stolen or the withdrawal being
+    stopped. Popular custodial platforms include Coinbase and BlockFi. 
+
+
+    ### Yield Token Cover
+
+    Funds are protected by yield token cover in the event that a yield token—a
+    token included in a yield-generating protocol, like yDAI—loses its peg to
+    its underlying asset and therefore loses some of its value. There is
+    protection against yield token protocol failure or peg loss for Yearn,
+    Convex, Idle USDT, and other cryptocurrencies.
+
+
+- title: NXM Token
+  shortTitle: nxm token
+  key: nxm-token
+  details: >
+
+    The governance token of the mutual, NXM, is used to connect the internal
+    economics of the mutual so that the platform may respond dynamically to
+    market conditions and capitalization levels and reward active members for
+    participating in the mutual's daily operations. To hold NXM, one must be a
+    member of the mutual. 
+
+
+    Members can take part in risk and claim assessments using NXM. The cost of
+    cover, which may also be purchased with ETH and DAI, can also be paid with
+    NXM. Members can also take part in governance by casting NXM votes on ideas.
+    Members decide the protocol's destiny through these votes.
+
+- title: wNXM Token
+  shortTitle: wnxm token
+  key: wnxm-token
+  details: >
+
+    Nexus Mutants, who wanted the possibility to wrap NXM into a token that could be traded on both centralised and decentralised exchanges, developed the Nexus Wrapper. The wNXM coin and the Nexus Wrapper are both community-managed projects. The mutual does not control the Nexus Wrapper or the wNXM token, but it does give links that lead to information on them.
+
+
+    A 1-to-1 backed token called wNXM can only be created by wrapping actual NXM. NXM is completely tradeable but only available for trading among members; it cannot be utilised at all on the Nexus Mutual site. The price of wNXM is determined by market forces on both centralised and decentralised exchanges.
+
+
+
+

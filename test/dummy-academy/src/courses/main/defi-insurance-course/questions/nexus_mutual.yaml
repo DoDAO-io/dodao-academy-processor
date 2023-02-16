@@ -1,0 +1,195 @@
+- uuid: cf7ba329-9f28-412d-9cc9-d3293ec79e34
+  type: SingleChoice
+  content: Who is the founder of Nexus Mutual?
+  hint: No Hint
+  explanation: High karp is the founder of Nexus Mutual
+  answerKeys:
+    - B
+  difficultyLevel: Low
+  choices:
+    - content: Vitalik Buterin
+      key: A
+    - content: Hugh Karp
+      key: B
+    - content: Mike Miglio
+      key: C
+    - content: Robert Forster
+      key: D
+- uuid: 9cb20aac-d82e-431a-bde3-621b6c533b23
+  type: SingleChoice
+  content: >-
+    Which of the following is/are a type of insurance cover provided by nexus
+    mutual?
+  hint: Nexus Mutual covers
+  explanation: >-
+    There are 3 types of covers offered by Nexus Mutual. Those are Protocol
+    Covers, Custody Cover and Yield Token Cover.
+  answerKeys:
+    - D
+  difficultyLevel: Medium
+  choices:
+    - content: Protocol Cover
+      key: A
+    - content: Expiration Cover
+      key: B
+    - content: Custody Cover
+      key: C
+    - content: Both A and C
+      key: D
+- uuid: 90bc73c1-893a-4cd5-ac3b-8aa74af44c2a
+  type: SingleChoice
+  content: >-
+    Which of the following covers is helpful in the case of smart contract
+    failure or oracle misuse?
+  hint: No Hint
+  explanation: >-
+    Protocol cover is helpful in the case of smart contract failure or oracle
+    misuse.
+  answerKeys:
+    - A
+  difficultyLevel: Medium
+  choices:
+    - content: Protocol Cover
+      key: A
+    - content: Yield token cover
+      key: B
+    - content: Custody Cover
+      key: C
+    - content: Expiration Cover
+      key: D
+- uuid: b734e61a-411c-4456-9eb1-5f27faaaf1e0
+  type: SingleChoice
+  content: >-
+    Which of the following covers is helpful in the case when your DeFi wallet
+    is attacked?
+  hint: No Hint
+  explanation: Custody Cover is helpful in the case when your DeFi wallet is attacked.
+  answerKeys:
+    - C
+  difficultyLevel: Medium
+  choices:
+    - content: Protocol Cover
+      key: A
+    - content: Yield token cover
+      key: B
+    - content: Custody Cover
+      key: C
+    - content: Expiration Cover
+      key: D
+- uuid: 866f57ac-540f-4b3d-bff6-6460b7f63c53
+  type: SingleChoice
+  content: >-
+    Which of the following covers is helpful in the case the token loses its
+    intrinsic value or the underlying asset losses its value?
+  hint: NoHint
+  explanation: >-
+    Yield Token Cover is helpful in the case the token loses its intrinsic value
+    or the underlying asset losses its value.
+  answerKeys:
+    - B
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - key: A
+      content: Protocol Cover
+    - key: B
+      content: Yield token cover
+    - key: C
+      content: Custody Cover
+    - key: D
+      content: Expiration Cover
+- uuid: 505dd8b3-da2b-4655-b468-d104ca714ece
+  type: SingleChoice
+  content: NXM is a type of
+  hint: NXM token helps in the proper functioning of nexus mutual protocol.
+  explanation: NXM token is a type of governance token.
+  answerKeys:
+    - D
+  difficultyLevel: High
+  choices:
+    - content: Commodity token
+      key: A
+    - content: Stablecoin
+      key: B
+    - content: Utility Token
+      key: C
+    - content: Governance token
+      key: D
+- uuid: eb6517cc-dd3d-49ad-aa44-a92716e8c79a
+  type: SingleChoice
+  content: Which of the following is NOT a function of an NXM token?
+  hint: No Hint
+  explanation: >-
+    NXM token is only for the mutual members hence it does not help to provide
+    insurance cover to non-mutual members.
+  answerKeys:
+    - C
+  difficultyLevel: High
+  choices:
+    - content: Risk and claim assessments
+      key: A
+    - content: Reward active members who help in the building of the platform
+      key: B
+    - content: Provide insurance cover to non-mutual members
+      key: C
+    - content: Provide voting rights
+      key: D
+- uuid: f73cbb4f-e091-44e9-9517-350b097ed0ab
+  type: SingleChoice
+  content: How NXM token can be traded on centralised and decentralised exchanges?
+  hint: No Hint
+  explanation: >-
+    wNXM or wrapped NXM has been developed to trade NXM on centralised and
+    decentralised exchanges.
+  answerKeys:
+    - C
+  difficultyLevel: Medium
+  choices:
+    - content: >-
+        Members of mutual have access to trade NXM on centralised and
+        decentralised exchanges
+      key: A
+    - content: Various centralised exchanges have accepted NXM for trade
+      key: B
+    - content: >-
+        NXM can be wrapped thus forming wNXM which can be traded on centralised
+        and decentralised exchanges.
+      key: C
+    - content: None of these
+      key: D
+- uuid: 941d074d-4261-4959-8e44-6379432d2f1b
+  type: SingleChoice
+  content: Which of the following conditions must be verified before claim approval?
+  hint: No Hint
+  explanation: >-
+    Claims should abide with the expected time period, should have been in
+    justified categories and significant amount.
+  answerKeys:
+    - B
+  difficultyLevel: High
+  choices:
+    - content: Loss of funds can be beyond the defined time period
+      key: A
+    - content: The claim should abide by the time period
+      key: B
+    - content: Funds lost are outside the categories justified
+      key: C
+    - content: Funds lost are more than the claim amount
+      key: D
+- uuid: aeb74bfe-9562-41e0-bc42-73006c0528f9
+  type: SingleChoice
+  content: What percentage of NXM is staked during the claim filling process?
+  hint: No Hint
+  explanation: 50% of NXM is staked on during the claim filling process.
+  answerKeys:
+    - D
+  difficultyLevel: Low
+  choices:
+    - content: 20%
+      key: A
+    - content: 40%
+      key: B
+    - content: 60%
+      key: C
+    - content: 50%
+      key: D

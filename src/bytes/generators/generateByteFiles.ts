@@ -12,28 +12,22 @@ function generateBytesTable(srcDirPath: string, bytesToGenerate: string[]) {
       const file = fs.readFileSync(`${srcDirPath}/${byte}`, 'utf8');
       const byteJson = YAML.parse(file) as GitByteModel;
 
-      const fileLink = `[Link](markdown/${byteJson.key}.md)`;
+      const fileLink = `[Link](markdown/${byteJson.id}.md)`;
       return `| ${index + 1}      | ${byteJson.name} | ${byteJson.content} |  ${fileLink} |`;
     })
     .join('\n ');
 }
 
-function generateBytes(header: string, footer: string, srcDirPath: string, generatedDirPath: string, bytesToGenerate: string[]) {
-  bytesToGenerate.forEach(byte => generateByte(header, footer, srcDirPath, generatedDirPath, byte));
+function generateBytes(srcDirPath: string, generatedDirPath: string, bytesToGenerate: string[]) {
+  bytesToGenerate.forEach(byte => generateByte(srcDirPath, generatedDirPath, byte));
 
   // prettier-ignore
   const courseReadmeContents =
-    dedent`${header}
----
-
-## Bytes
+    dedent`## Bytes
 
 | S.No        | Title       |  Details  |  Link  |
 | ----------- | ----------- |----------- | ----------- |
 ${(generateBytesTable(srcDirPath, bytesToGenerate))}
-
----
-${footer} 
 `;
 
   console.log('Generate Bytes README.md');
@@ -54,13 +48,11 @@ function createDirectories(bytesOutDir: string) {
 
 export function generateByteFiles(bytesSrcDir: string, bytesOutDir: string) {
   const bytesFile = fs.readFileSync(`${bytesSrcDir}/bytes.yaml`, 'utf8');
-  const header = fs.readFileSync(`${bytesSrcDir}/bytes-header.md`, 'utf8');
-  const footer = fs.readFileSync(`${bytesSrcDir}/bytes-footer.md`, 'utf8');
 
   createDirectories(bytesOutDir);
 
   const bytesToGenerate = YAML.parse(bytesFile).bytes as string[];
-  generateBytes(header, footer, bytesSrcDir, bytesOutDir, bytesToGenerate);
+  generateBytes(bytesSrcDir, bytesOutDir, bytesToGenerate);
 
   writeFileSync(
     `${bytesOutDir}/json/bytes.json`,

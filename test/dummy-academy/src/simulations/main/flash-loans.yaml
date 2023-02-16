@@ -8,12 +8,9 @@ steps:
   - uuid: c745cfaa-b68e-42ed-a44f-8c55ea6bc2a9
     name: Step 1
     content: Step 1 Content
-    stepItems: []
   - uuid: 606c3f20-93f6-47a0-b7bb-aa509d798b24
     name: Step 2
-    content: Step 2 Content
-    stepItems: []
+    iframeUrl: https://dodao.academy/
   - uuid: cc004d15-b270-45ec-aa8a-73bec534281a
     name: Step 3
     content: Step 3 Content
-    stepItems: []

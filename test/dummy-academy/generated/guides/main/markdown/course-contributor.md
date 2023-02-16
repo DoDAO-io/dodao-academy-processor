@@ -1,8 +1,3 @@
-## Header
-This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
-
----
-
 ## Course Contributor
 
 
@@ -180,8 +175,3 @@ Create an account on Trello as we use that for task management [https://trello.c
 
     
 
-
----
-## Footer
-This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
-    

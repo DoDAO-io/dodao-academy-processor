@@ -45,15 +45,12 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
   }
 }
 
-export function generateByte(header: string, footer: string, bytesSrcDir: string, bytesOutPath: string, byteToGenerate: string) {
+export function generateByte(bytesSrcDir: string, bytesOutPath: string, byteToGenerate: string) {
   console.log(`Generate Byte Files for ${bytesSrcDir}/${byteToGenerate}`);
   const file = fs.readFileSync(`${bytesSrcDir}/${byteToGenerate}`, 'utf8');
   const byteJson = YAML.parse(file) as GitByteModel;
 
-  const courseReadmeContents = dedent`${header}
----
-
-## ${byteJson.name}
+  const courseReadmeContents = dedent`## ${byteJson.name}
 
 ${byteJson.steps
   .map(step => {
@@ -67,14 +64,10 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
 
 `;
   })
-  .join('\n\n---')}
-
----
-${footer}    
-   
+  .join('\n\n---')}   
 `;
 
-  writeFileSync(`${bytesOutPath}/markdown/${byteJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${bytesOutPath}/markdown/${byteJson.id}.md`, courseReadmeContents);
 
-  writeFileSync(`${bytesOutPath}/json/${byteJson.key}.json`, JSON.stringify(byteJson, null, 2));
+  writeFileSync(`${bytesOutPath}/json/${byteJson.id}.json`, JSON.stringify(byteJson, null, 2));
 }

@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "key": {
+    "id": {
       "type": "string"
     },
     "name": {
@@ -32,7 +32,7 @@
     }
   },
   "required": [
-    "key",
+    "id",
     "name",
     "excerpt",
     "content",

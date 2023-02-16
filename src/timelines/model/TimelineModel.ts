@@ -1,5 +1,5 @@
 export interface TimelineModel {
-  key: string;
+  id: string;
   name: string;
   excerpt: string;
   content: string;

@@ -8,5 +8,5 @@ export function generateTimeline(timelinesSrcDir: string, timelinesOutPath: stri
   const file = fs.readFileSync(`${timelinesSrcDir}/${timelineToGenerate}`, 'utf8');
   const timelineJson = YAML.parse(file) as TimelineModel;
 
-  writeFileSync(`${timelinesOutPath}/json/${timelineJson.key}.json`, JSON.stringify(timelineJson, null, 2));
+  writeFileSync(`${timelinesOutPath}/json/${timelineJson.id}.json`, JSON.stringify(timelineJson, null, 2));
 }

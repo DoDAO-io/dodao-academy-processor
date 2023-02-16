@@ -1,10 +1,6 @@
 {
+  "id": "flash-loans",
   "name": "Flash Loans",
-  "key": "flash-loans",
-  "categories": [
-    "developer",
-    "engineering"
-  ],
   "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
   "content": "Loans without any collateral",
   "created": "2022-11-14T16:08:12.533Z",

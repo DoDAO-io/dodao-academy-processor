@@ -19,7 +19,7 @@
       "type": "string"
     },
     "steps": {
-      "$ref": "/ByteStepSchema"
+      "$ref": "/SimulationStepSchema"
     },
     "publishStatus": {
       "type": "string"
