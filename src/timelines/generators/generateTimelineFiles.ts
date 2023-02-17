@@ -24,7 +24,7 @@ export function generateTimelineFiles(bytesSrcDir: string, bytesOutDir: string) 
   timelines.forEach(timeline => generateTimeline(bytesSrcDir, bytesOutDir, timeline));
 
   writeFileSync(
-    `${bytesOutDir}/json/bytes.json`,
+    `${bytesOutDir}/json/timelines.json`,
     JSON.stringify(
       timelines.map(byte => byte.replace('.yaml', '.json')),
       null,
