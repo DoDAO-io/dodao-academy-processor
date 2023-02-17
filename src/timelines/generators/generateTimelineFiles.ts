@@ -15,16 +15,16 @@ function createDirectories(bytesOutDir: string) {
   });
 }
 
-export function generateTimelineFiles(bytesSrcDir: string, bytesOutDir: string) {
-  const bytesFile = fs.readFileSync(`${bytesSrcDir}/timelines.yaml`, 'utf8');
+export function generateTimelineFiles(timelinesSrcDir: string, timelinesOutDir: string) {
+  const timelinesFile = fs.readFileSync(`${timelinesSrcDir}/timelines.yaml`, 'utf8');
 
-  createDirectories(bytesOutDir);
+  createDirectories(timelinesOutDir);
 
-  const timelines = YAML.parse(bytesFile).timelines as string[];
-  timelines.forEach(timeline => generateTimeline(bytesSrcDir, bytesOutDir, timeline));
+  const timelines = YAML.parse(timelinesFile).timelines as string[];
+  timelines.forEach(timeline => generateTimeline(timelinesSrcDir, timelinesOutDir, timeline));
 
   writeFileSync(
-    `${bytesOutDir}/json/timelines.json`,
+    `${timelinesOutDir}/json/timelines.json`,
     JSON.stringify(
       timelines.map(byte => byte.replace('.yaml', '.json')),
       null,

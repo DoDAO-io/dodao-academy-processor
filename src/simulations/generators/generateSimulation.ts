@@ -29,7 +29,7 @@ IframeUrl: ${step.iframeUrl}
    
 `;
 
-  writeFileSync(`${simulationsOutPath}/markdown/${simulationJson.id}.md`, courseReadmeContents);
+  writeFileSync(`${simulationsOutPath}/markdown/${simulationToGenerate.replace('.yaml', '.md')}`, courseReadmeContents);
 
-  writeFileSync(`${simulationsOutPath}/json/${simulationJson.id}.json`, JSON.stringify(simulationJson, null, 2));
+  writeFileSync(`${simulationsOutPath}/json/${simulationToGenerate.replace('.yaml', '.json')}`, JSON.stringify(simulationJson, null, 2));
 }

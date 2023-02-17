@@ -68,7 +68,7 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
    
 `;
 
-  writeFileSync(`${guidesOutDir}/markdown/${guideJson.key}.md`, courseReadmeContents);
+  writeFileSync(`${guidesOutDir}/markdown/${guideToGenerate.replace('.yaml', '.md')}`, courseReadmeContents);
 
-  writeFileSync(`${guidesOutDir}/json/${guideJson.key}.json`, JSON.stringify(guideJson, null, 2));
+  writeFileSync(`${guidesOutDir}/json/${guideToGenerate.replace('.yaml', '.json')}`, JSON.stringify(guideJson, null, 2));
 }

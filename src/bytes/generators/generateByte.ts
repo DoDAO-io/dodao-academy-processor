@@ -67,7 +67,7 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
   .join('\n\n---')}   
 `;
 
-  writeFileSync(`${bytesOutPath}/markdown/${byteJson.id}.md`, courseReadmeContents);
+  writeFileSync(`${bytesOutPath}/markdown/${byteToGenerate.replace('.yaml', '.md')}`, courseReadmeContents);
 
-  writeFileSync(`${bytesOutPath}/json/${byteJson.id}.json`, JSON.stringify(byteJson, null, 2));
+  writeFileSync(`${bytesOutPath}/json/${byteToGenerate.replace('.yaml', '.json')}`, JSON.stringify(byteJson, null, 2));
 }
