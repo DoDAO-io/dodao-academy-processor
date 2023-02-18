@@ -41,6 +41,17 @@
         }
       ]
     },
+    "tags": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
     "priority": {
       "type": "integer"
     }
@@ -55,7 +66,8 @@
     "created",
     "publishStatus",
     "events",
-    "priority"
+    "priority",
+    "tags"
   ],
   "additionalProperties": false
 }

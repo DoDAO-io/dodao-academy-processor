@@ -37,6 +37,17 @@
         }
       ]
     },
+    "tags": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
     "priority": {
       "type": "integer"
     }
@@ -50,6 +61,7 @@
     "priority",
     "steps",
     "publishStatus",
+    "tags",
     "thumbnail"
   ],
   "additionalProperties": false

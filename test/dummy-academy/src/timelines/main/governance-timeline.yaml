@@ -7,6 +7,7 @@ created: '2022-11-15T20:00:13.043Z'
 publishStatus: Live
 priority: 50
 admins: []
+tags: []
 events:
   - name: Some Event 1
     uuid: event-1
