@@ -12,4 +12,6 @@ export interface GitSimulationModel {
   name: string;
   publishStatus: SimulationPublishStatus;
   steps: GitSimulationStep[];
+  admins: string[];
+  priority: number;
 }

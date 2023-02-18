@@ -4,6 +4,8 @@ thumbnail: ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8
 content: Loans without any collateral
 created: "2022-11-14T16:08:12.533Z"
 publishStatus: Live
+priority: 50
+admins: []
 steps:
   - uuid: c745cfaa-b68e-42ed-a44f-8c55ea6bc2a9
     name: Step 1

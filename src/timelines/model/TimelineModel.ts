@@ -7,4 +7,6 @@ export interface TimelineModel {
   created: string;
   publishStatus: string;
   events: string;
+  admins: string[];
+  priority: number;
 }

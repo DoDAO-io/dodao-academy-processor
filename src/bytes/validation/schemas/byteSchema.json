@@ -11,7 +11,6 @@
     "created": {
       "type": "string"
     },
-
     "id": {
       "type": "string"
     },
@@ -26,13 +25,29 @@
     },
     "thumbnail": {
       "type": "string"
+    },
+    "admins": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "priority": {
+      "type": "integer"
     }
   },
   "required": [
+    "admins",
     "content",
     "created",
     "id",
     "name",
+    "priority",
     "steps",
     "publishStatus",
     "thumbnail"

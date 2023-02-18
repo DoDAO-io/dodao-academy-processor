@@ -20,6 +20,8 @@ export interface GitByteModel {
   steps: GitByteStep[];
   thumbnail: string;
   uuid: string;
+  admins: string[];
+  priority: number;
 }
 
 export const isQuestion = (item: { type: string }) => item.type === QuestionType.MultipleChoice || item.type === QuestionType.SingleChoice;

@@ -29,9 +29,24 @@
     },
     "publishStatus": {
       "type": "string"
+    },
+    "admins": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "priority": {
+      "type": "integer"
     }
   },
   "required": [
+    "admins",
     "id",
     "name",
     "excerpt",
@@ -39,7 +54,8 @@
     "thumbnail",
     "created",
     "publishStatus",
-    "events"
+    "events",
+    "priority"
   ],
   "additionalProperties": false
 }
