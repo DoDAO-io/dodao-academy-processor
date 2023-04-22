@@ -9,10 +9,10 @@ export function validateUniqueUUIDs(bytesSrcDir: string, bytesJson: string[]) {
     const byteFilePath = `${bytesSrcDir}/${byte}`;
     const file = fs.readFileSync(byteFilePath, 'utf8');
     const byteJson = YAML.parse(file) as GitByteModel;
-    if (uuids.includes(byteJson.uuid)) {
-      throw new Error(`Duplicate Byte UUID ${byteJson.uuid} in ${byte}`);
+    if (uuids.includes(byteJson.id)) {
+      throw new Error(`Duplicate Byte UUID ${byteJson.id} in ${byte}`);
     } else {
-      uuids.push(byteJson.uuid);
+      uuids.push(byteJson.id);
     }
 
     byteJson.steps.forEach(step => {

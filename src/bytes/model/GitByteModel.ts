@@ -19,7 +19,6 @@ export interface GitByteModel {
   publishStatus: GuidePublishStatus;
   steps: GitByteStep[];
   thumbnail: string;
-  uuid: string;
   admins: string[];
   priority: number;
 }
