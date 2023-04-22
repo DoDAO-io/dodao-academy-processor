@@ -15,13 +15,33 @@
     "content": {
       "type": "string"
     },
+    "hint": {
+      "type": "string",
+      "minLength": 2
+    },
+    "explanation": {
+      "type": "string"
+    },
     "answerKeys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minLength": 1
+    },
+    "subTopics": {
       "type": "array",
       "items": [
         {
           "type": "string"
+        },
+        {
+          "type": "string"
         }
       ]
+    },
+    "difficultyLevel": {
+      "type": "string"
     },
     "choices": {
       "type": "array",
@@ -98,5 +118,4 @@
     "choices"
   ],
   "additionalProperties": false
-
 }
