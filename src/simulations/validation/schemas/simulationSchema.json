@@ -61,7 +61,6 @@
     "priority",
     "steps",
     "publishStatus",
-    "thumbnail",
     "tags"
   ],
   "additionalProperties": false
