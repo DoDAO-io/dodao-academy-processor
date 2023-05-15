@@ -15,6 +15,9 @@
     "content": {
       "type": "string"
     },
+    "explanation": {
+      "type": "string"
+    },
     "answerKeys": {
       "type": "array",
       "items": [
@@ -34,6 +37,9 @@
             },
             "key": {
               "type": "string"
+            },
+            "order": {
+              "type": "integer"
             }
           },
           "required": [
@@ -95,7 +101,8 @@
     "type",
     "content",
     "answerKeys",
-    "choices"
+    "choices",
+    "explanation"
   ],
   "additionalProperties": false
 
