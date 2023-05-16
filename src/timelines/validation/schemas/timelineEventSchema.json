@@ -17,6 +17,9 @@
     },
     "content": {
       "type": "string"
+    },
+    "moreLink": {
+      "type": "string"
     }
   },
   "required": [

@@ -62,7 +62,6 @@
     "name",
     "excerpt",
     "content",
-    "thumbnail",
     "created",
     "publishStatus",
     "events",
