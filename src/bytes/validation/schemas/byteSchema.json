@@ -23,6 +23,9 @@
     "publishStatus": {
       "type": "string"
     },
+    "visibility": {
+      "type": "string"
+    },
     "thumbnail": {
       "type": "string"
     },

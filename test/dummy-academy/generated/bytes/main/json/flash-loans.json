@@ -8,6 +8,7 @@
   "priority": 50,
   "admins": [],
   "tags": [],
+  "visibility": "Public",
   "steps": [
     {
       "uuid": "c745cfaa-b68e-42ed-a44f-8c55ea6bc2a9",
