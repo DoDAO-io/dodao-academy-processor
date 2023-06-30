@@ -37,9 +37,6 @@
             },
             "key": {
               "type": "string"
-            },
-            "order": {
-              "type": "integer"
             }
           },
           "required": [
