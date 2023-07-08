@@ -66,5 +66,5 @@
     "publishStatus",
     "tags"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }
