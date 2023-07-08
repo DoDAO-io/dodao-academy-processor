@@ -9,28 +9,28 @@ priority: 50
 admins: []
 tags: []
 events:
-  - name: Some Event 1
+  - title: Some Event 1
     uuid: event-1
     date: '2022-11-15T20:00:13.043Z'
-    excerpt: Excerpt
-    content: Some more details
-  - name: Some Event 2
+    summary: Excerpt
+    fullDetails: Some more details
+  - title: Some Event 2
     uuid: event-2
     date: '2022-10-15T20:00:13.043Z'
-    excerpt: Excerpt
-    content: Some more details
-  - name: Some Event 3
+    summary: Excerpt
+    fullDetails: Some more details
+  - title: Some Event 3
     uuid: event-3
     date: '2022-09-15T20:00:13.043Z'
-    excerpt: Excerpt
-    content: Some more details
-  - name: Some Event 4
+    summary: Excerpt
+    fullDetails: Some more details
+  - title: Some Event 4
     uuid: event-4
     date: '2022-08-15T20:00:13.043Z'
-    excerpt: Excerpt
-    content: Some more details
-  - name: Some Event 5
+    summary: Excerpt
+    fullDetails: Some more details
+  - title: Some Event 5
     uuid: event-5
     date: '2022-07-15T20:00:13.043Z'
-    excerpt: Excerpt
-    content: Some more details
+    summary: Excerpt
+    fullDetails: Some more details

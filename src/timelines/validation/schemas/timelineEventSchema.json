@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "name": {
+    "title": {
       "type": "string"
     },
     "uuid": {
@@ -12,10 +12,10 @@
     "date": {
       "type": "string"
     },
-    "excerpt": {
+    "summary": {
       "type": "string"
     },
-    "content": {
+    "fullDetails": {
       "type": "string"
     },
     "moreLink": {
@@ -23,11 +23,10 @@
     }
   },
   "required": [
-    "name",
+    "title",
     "uuid",
-    "content",
-    "date",
-    "excerpt"
+    "summary",
+    "date"
   ],
   "additionalProperties": false
 }
