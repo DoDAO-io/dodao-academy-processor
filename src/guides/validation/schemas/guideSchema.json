@@ -54,6 +54,9 @@
     },
     "version": {
       "type": "integer"
+    },
+    "priority": {
+      "type": "integer"
     }
   },
   "required": [
